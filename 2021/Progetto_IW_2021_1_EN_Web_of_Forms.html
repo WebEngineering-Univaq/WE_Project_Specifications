@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Final Course Projects</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<body>
+<section class="intestazione">
+<div class="ncorso">Web Engineering Course</div>
+<div class="aa">Final Projects A.Y. 2021/2022</div>
+<div class="nprogetto">Specification #1</div>
+</section>
+<h1>Project "Web of Forms" <span class="versione">Version 1.0</span></h1>
+<h2>Preamble</h2>
+<p>The course projects are inspired by real-world needs, and they usually refer to similar sites already on the web. Students must follow the specifications given by this document, but they can also refine them through an interaction with the teacher and the analysis of similar websites. The final website must be completely original, well organized and easily accessible to all the users.</p>
+<h2>Site Specifications</h2>
+<div><div>
+ <p>The <em>Web of Forms</em> website is a handy way to generate formatted forms (standard letters, public forms, etc.) without using a word processor. The idea is to exploit the potential of HTML and templates, which we learned to use for the creation of web pages, also to generate forms printable or otherwise exportable in common document formats such as PDF. To this aim, users-authors will be able to create templates for standard documents <em>(tip: starting from a document you already have in a word processor format, you can use the common "save as HTML" function to generate an initial draft of such template)</em> and define the name and type of the placeholder fields they contain. Other users of the site will then be able to fill in these fields and view (as HTML) or download (as PDF) the resulting formatted document. In particular, the system will support (with the suitable form controls) the input of text fields, numbers, and textual values chosen from a list. For sake of simplicity, we omit tables (for example the rows of an invoice), but if you try to include them, it will be a great added value for your project! <em>Tip: study in-depth how to combine, in your template engine, a data model with a template loaded as a string from the database, and how to have the output written to a second string. For HTML-PDF conversion, use the converter provided by iText (https://itextpdf.com/en/products/itext-7/convert-html-css-to-pdf-pdfhtml, https://itextpdf.com/en/blog/technical-notes/pdfhtml-configuration-options).</em></p>
+</div></div>
+<p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
+<div><div>
+ <ul>
+  <li><p>Users will be able to register in the system by providing a nickname and an email address.</p></li>
+  <li><p>Once authenticated, users will be able to upload a template in three steps: 1) provide its name and description, 2) upload the HTML template (file upload and/or direct input in a text field), 3) provide name, type, descriptive text and internal name (the one used in the template and to be inserted in the data model) for each of the placeholder fields in the template.</p></li>
+  <li><p>A new template will be accessible only to administrative users (which we simply assume to be users with special privileges) until one of them, having tested it, will make it public.</p></li>
+  <li><p>Authors of a template can delete or modify it at any time. The system will keep track of the last modification date and include a version counter to be incremented with each modification. This information should be clearly presented to users, so that they know if and when the template has been changed.</p></li>
+  <li><p>The process of filling out the form by users (<em>even anonymous</em>) will be as follows:</p>
+   <ol>
+    <li><p>Users will be able to choose a module from a list. <em>Optionally, to help users make their choice, you could provide a preview of the form by filling it in "on the fly" with random data associated with all of its fields.</em></p></li>
+    <li><p>Once a form has been selected, the system must generate and show to the user an appropriate form in which to enter the values of all the fields required by the form itself*. In this phase, try to assist users as much as possible, e.g., use the right controls for each type of field and provide some kind of validation, also on the client side.*</p></li>
+    <li><p>Once the field values have been sent (and validated on the server), the server will combine them with the template, providing the user with a final HTML version of the completed form.</p></li>
+    <li><p>After examining the result, the user can choose to go back (to step 2 to change the values of the fields or to step 1 to choose another template) or download the completed template both in HTML format (the same displayed ) and in PDF format (converted from HTML as explained above).</p></li>
+   </ol></li>
+  <li><p>The user should also be able to download, in step 3, a file in JSON format containing the definition of the completed form, that is, the name of the template and the list of fields with their values. The system should provide a way to load this kind of file in step 1, going directly to the final preview (step 4), with the ability to go back and correct the choices, as already illustrated.</p></li>
+  <li><p>Finally, registered users should be able to send feedback to the form authors by sending them text messages that can be read by the authors themselves, once authenticated, in a special personal area.</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Directions for Project Development
+</section>
+<section class="indicazioni">
+<h2>Technologies</h2>
+<ul>
+<li>The basic structure of the site must be created using HTML5.The validation of all the site pages with respect to the chosen HTML flavour is an important part of the development and <strong>must</strong>be reported in the documentation.</li>
+<li>The site layout must be realised using CCS style sheets. The layout can be freely based on third party layouts available on the web or shown during the lectures. In this case, the degree of <strong>customization</strong>of the layout will be taken into account in the final project assessment. <strong>A responsive layout is not
+required, but strongly suggested.</strong></li>
+<li>For the <em>client-side</em> programming, JavaScript is the required language. It is possible to include libraries developed by third parties, provided that they have suitable cross-browser portability and that they are described in the project documentation. However, <strong>any
+abuse of these technologies is not recommended</strong> , especially when they can be replaced with a suitable use of HTML, CSS, etc. <strong>In general, your site should
+be functional also with JavaScript disabled</strong> . The site without scripts may be less &quot;friendly&quot; or allow the access to &quot;core&quot; functionalities only, but sites whose dynamics is entirely script-based are not allowed. However, <strong>scripts
+can play a more important a role in the functionalities whose users are restricted
+and pre-determined</strong> (e.g., in the <em>back-end</em> functionalities for administrators, but not in the public <em>front-end</em>or in the login procedure).</li>
+<li>For the <em>server-side</em> programming, Java <em>(servlets,
+JSP)</em> is the <strong>required</strong> language*.* Any DBMS and template engine can be employed, if required*.*Again, it is possible to rely on
+external libraries.</li>
+<li>In general, the site must work and have a good <em>rendering</em> on the latest versions of Edge, Firefox and Chrome, and <em>possibly</em> be compatible with older browsers (in this case it should at least *degrade
+well)*and with the latest versions of other browsers, like Opera. Browser
+compatibility <strong>must</strong>be explicitly stated in the documentation.</li>
+</ul>
+<h2>Project Development and Documentation</h2>
+<p>The specifications may not be exhaustive or completely defined. Every feature added or refined, also through an interaction with the stakeholder or the site end users, should be adequately discussed. All the design choices must be discussed and motivated.</p>
+<p>The final project, developed following the guidelines given by the present specification, must be a fully functional website, whose contents and features will be assessed during the examination. The specification parts marked as <em>optional</em>, if not developed, will not make the project insufficient but, on the other hand, they will not allow your project to reach the highest mark. If you choose to implement an optional feature, the result should not be necessarily perfect or complete: it must only show your commitment to deal with an advanced issue.</p>
+<p>The documentation (<strong>in electronic format</strong> ) which accompanies the project <strong>must</strong>contain at least the following information:</p>
+<ul>
+<li>Indication of software dependencies (which libraries are required on the client and server side?).</li>
+<li>Indication of the functionalities that have been developed or not developed. Detailed description of any extra or optional functionality added to the project.</li>
+<li>Diagram showing the site structure.</li>
+<li>Relational schema of the database (if any).</li>
+<li>Analytical description of the site layout, also indicating its static/dynamic components.</li>
+<li>Description of any advanced technology (language, framework, plugin, library, etc.) used in the project, specifying the reason of its adoption and the actual contribution given to the project development.</li>
+<li>Description of <em>any</em>cross-browser programming/rendering problem encountered, list of compatible browsers.</li>
+<li>Screenshots of the most important website pages (<em>optional</em>).</li>
+</ul>
+<p><em>The actual contribution of each group member</em> to the project <strong>must</strong>be declared in the documentation (indicating, for example, the members that mainly worked on server and client side programming, the layout designer, etc.). During the examination, each group member will describe its part of the realisation.</p>
+<h2>Project Evaluation</h2>
+<p>To evaluate the project, the following issues will be considered (in order of importance):</p>
+<ol>
+<li>Compliance with the specifications.</li>
+<li>Technical correctness.</li>
+<li>Organizational clarity and correctness of the contents.</li>
+<li>Accessibility and standards compliance.</li>
+<li>Appropriate use of static and dynamic contents.</li>
+<li>Design quality.</li>
+<li>Adequacy of the documentation.</li>
+</ol>
+<p>This evaluation will be combined with the result of the project discussion.</p>
+<h2>Additional Information</h2>
+<p>This specification is available in PDF format on the website of the Web Engineering course at the address http://people.disim.univaq.it/dellapenna. Additional information on the specifications can be obtained directly via email by writing to giuseppe.dellapenna@univaq.it.</p>
+<p>Please note that projects should be carried out by <em>small</em> student groups (three members is the recommended number). Exceptions to this rule must be agreed with the teacher.</p>
+</section>
+</body>
+</html>

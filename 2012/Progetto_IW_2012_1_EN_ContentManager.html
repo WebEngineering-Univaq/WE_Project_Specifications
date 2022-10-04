@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Final Course Projects</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<body>
+<section class="intestazione">
+<div class="ncorso">Web Engineering Course</div>
+<div class="aa">Final Projects A.Y. 2012/2013</div>
+<div class="nprogetto">Specification #1</div>
+</section>
+<h1>Project "ContentManager" <span class="versione">Version 1.0</span></h1>
+<h2>Preamble</h2>
+<p>The course projects are inspired by real-world needs, and they usually refer to similar sites already on the web. Students must follow the specifications given by this document, but they can also refine them through an interaction with the teacher and the analysis of similar websites. The final website must be completely original, well organized and easily accessible to all the users.</p>
+<h2>Site Specifications</h2>
+<div><div>
+ <p>The <em>ContentManager</em> site is a simple web-based system for creating static mini-websites without the need for programming or writing of HTML/CSS.</p>
+ <p>Each mini-site is identified by its author's username and has a tree structure corresponding to the logical structure of the site navigation, with an HTML page associated to each node. The root node always corresponds to the homepage. For example:</p>
+ <p>Homepage</p>
+ <p>&gt; About</p>
+ <p>&gt; Interests</p>
+ <p>&gt; Ski</p>
+ <p>&gt; Photography</p>
+ <p>&gt; Links</p>
+ <p>&gt; Contacts</p>
+ <p>All the pages of the mini-site are identified by a numeric code, share the same header and footer, and are displayed using the same stylesheet.</p>
+ <p>Header, footer, and bodies of HTML pages are stored in the site database, whereas stylesheets are saved on the file system. The system has a default set of stylesheets, each associated with a name and a description, which define the appearance of all major HTML elements (headings, paragraphs, tables, lists, etc.).</p>
+ <p>The homepage of the mini-site for a particular user can be requested with an URL like http://&lt;web_application_base_URL&gt;/site?user=&lt;<em>username</em> &gt;, whereas any other page with identifier <em>X</em> on same site should correspond to the URL http://&lt;web_application_base_URL&gt;/site?user=&lt;<em>username</em> &gt;&amp;page=<em>X.</em></p>
+ <p>To answer these URLs, the system dynamically composes the final web page and, in particular, inserts in its body the following four parts: the common header of the mini-site, followed by the contents of the requested page, then a navigation menu (which could appear anywhere on the final page), and finally the common footer. The generated page head should also contain a reference to the stylesheet chosen by the user.</p>
+ <p>The navigation menu is created automatically from the tree structure of the site, and contains at least a link to the parent of the current page (if it is not the homepage) and links to all its child pages. For example, the menu for the <em>Interests</em> page in the structure above should contain links to <em>Homepage</em> , <em>Ski</em> and <em>Photography</em>.</p>
+ <p>The user can also upload images in the web space, following a suitable procedure, and up to a given maximum size (that is, until the total size of the uploaded images is below a certain limit). Each image is associated to a numeric identifier <em>Y</em> , in such a way that it can be downloaded (for example, within a page of the mini-site, with an <em>img</em> tag) using a URL like http://&lt;web_application_base_URL&gt;/image?user=&lt;<em>username</em> &gt;&amp;image=<em>Y. Tip</em>: To create a servlet that allows to "download" an image and to figure out how to upload a binary file on the server, see the examples developed during the lectures. Images can be stored in user-specific separate directories or in the same directory, renaming each file so that their names do not conflict. Each numeric identifier must then be mapped on the correct file name on the file system.</p>
+</div></div>
+<p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
+<div><div>
+ <ul>
+  <li><p>Users can register on <em>ContentManager</em> by providing their data and a valid email address (the validity check, which can be performed by sending an email with a link to click, is <em>optional</em>), and receiving the corresponding login credentials. The system initializes the user web space by creating the homepage (the root of the navigation tree), initially containing a predefined text, and generating a default header/footer for the mini-site (e.g., with the user name, the creation date, etc.).</p></li>
+  <li><p>Registered users can access their web space, view the site tree structure, edit or delete each page, and create new pages at any level of the tree. When creating a new page, after specifying where it should appear within the tree, the user can choose whether to start from a blank page or from a page template (see below).</p></li>
+  <li><p><em>Optionally</em> , the user may also have the ability to move a subtree (i.e., a page and all its descendants) in a different position of the navigation tree.</p></li>
+  <li><p>Registered users can also modify the header and footer of their mini-site.</p></li>
+  <li><p>Editing of pages and header/footer contents must be performed through a WYSIWYG HTML editor like <em>ckeditor</em> (http://ckeditor.com/) or <em>tinymce</em> (http://www.tinymce.com/).</p></li>
+  <li><p>Registered users can view a list of all the images they uploaded in the site, delete some of them or add new ones. The list should clearly show the link (as the one above) to be used to embed or download the image.</p></li>
+  <li><p>Registered users can view the list of predefined system stylesheets and choose which one to apply to their site.</p></li>
+  <li><p>Finally, users may make "public" one or more of their pages by marking them as <em>templates</em>, so that other users can use them to start new pages of their mini-site, as described above.</p></li>
+  <li><p>The application homepage should contain, besides the register and login controls, the names of the last created mini-sites, which can be clicked to access the mini-site homepages and then browse them using either the navigation menu or any internal link.</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Directions for Project Development
+</section>
+<section class="indicazioni">
+<h2>Technologies</h2>
+<ul>
+<li>The basic structure of the site must be created using HTML5.The validation of all the site pages with respect to the chosen HTML flavour is an important part of the development and <strong>must</strong>be reported in the documentation.</li>
+<li>The site layout must be realised using CCS style sheets. The layout can be freely based on third party layouts available on the web or shown during the lectures. In this case, the degree of <strong>customization</strong>of the layout will be taken into account in the final project assessment. <strong>A responsive layout is not
+required, but strongly suggested.</strong></li>
+<li>For the <em>client-side</em> programming, JavaScript is the required language. It is possible to include libraries developed by third parties, provided that they have suitable cross-browser portability and that they are described in the project documentation. However, <strong>any
+abuse of these technologies is not recommended</strong> , especially when they can be replaced with a suitable use of HTML, CSS, etc. <strong>In general, your site should
+be functional also with JavaScript disabled</strong> . The site without scripts may be less &quot;friendly&quot; or allow the access to &quot;core&quot; functionalities only, but sites whose dynamics is entirely script-based are not allowed. However, <strong>scripts
+can play a more important a role in the functionalities whose users are restricted
+and pre-determined</strong> (e.g., in the <em>back-end</em> functionalities for administrators, but not in the public <em>front-end</em>or in the login procedure).</li>
+<li>For the <em>server-side</em> programming, Java <em>(servlets,
+JSP)</em> is the <strong>required</strong> language*.* Any DBMS and template engine can be employed, if required*.*Again, it is possible to rely on
+external libraries.</li>
+<li>In general, the site must work and have a good <em>rendering</em> on the latest versions of Edge, Firefox and Chrome, and <em>possibly</em> be compatible with older browsers (in this case it should at least *degrade
+well)*and with the latest versions of other browsers, like Opera. Browser
+compatibility <strong>must</strong>be explicitly stated in the documentation.</li>
+</ul>
+<h2>Project Development and Documentation</h2>
+<p>The specifications may not be exhaustive or completely defined. Every feature added or refined, also through an interaction with the stakeholder or the site end users, should be adequately discussed. All the design choices must be discussed and motivated.</p>
+<p>The final project, developed following the guidelines given by the present specification, must be a fully functional website, whose contents and features will be assessed during the examination. The specification parts marked as <em>optional</em>, if not developed, will not make the project insufficient but, on the other hand, they will not allow your project to reach the highest mark. If you choose to implement an optional feature, the result should not be necessarily perfect or complete: it must only show your commitment to deal with an advanced issue.</p>
+<p>The documentation (<strong>in electronic format</strong> ) which accompanies the project <strong>must</strong>contain at least the following information:</p>
+<ul>
+<li>Indication of software dependencies (which libraries are required on the client and server side?).</li>
+<li>Indication of the functionalities that have been developed or not developed. Detailed description of any extra or optional functionality added to the project.</li>
+<li>Diagram showing the site structure.</li>
+<li>Relational schema of the database (if any).</li>
+<li>Analytical description of the site layout, also indicating its static/dynamic components.</li>
+<li>Description of any advanced technology (language, framework, plugin, library, etc.) used in the project, specifying the reason of its adoption and the actual contribution given to the project development.</li>
+<li>Description of <em>any</em>cross-browser programming/rendering problem encountered, list of compatible browsers.</li>
+<li>Screenshots of the most important website pages (<em>optional</em>).</li>
+</ul>
+<p><em>The actual contribution of each group member</em> to the project <strong>must</strong>be declared in the documentation (indicating, for example, the members that mainly worked on server and client side programming, the layout designer, etc.). During the examination, each group member will describe its part of the realisation.</p>
+<h2>Project Evaluation</h2>
+<p>To evaluate the project, the following issues will be considered (in order of importance):</p>
+<ol>
+<li>Compliance with the specifications.</li>
+<li>Technical correctness.</li>
+<li>Organizational clarity and correctness of the contents.</li>
+<li>Accessibility and standards compliance.</li>
+<li>Appropriate use of static and dynamic contents.</li>
+<li>Design quality.</li>
+<li>Adequacy of the documentation.</li>
+</ol>
+<p>This evaluation will be combined with the result of the project discussion.</p>
+<h2>Additional Information</h2>
+<p>This specification is available in PDF format on the website of the Web Engineering course at the address http://people.disim.univaq.it/dellapenna. Additional information on the specifications can be obtained directly via email by writing to giuseppe.dellapenna@univaq.it.</p>
+<p>Please note that projects should be carried out by <em>small</em> student groups (three members is the recommended number). Exceptions to this rule must be agreed with the teacher.</p>
+</section>
+</body>
+</html>

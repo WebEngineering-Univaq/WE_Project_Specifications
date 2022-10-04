@@ -1,0 +1,170 @@
+<!doctype html>
+
+<html><head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Progetti di Fine Corso</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<section class="intestazione">
+<div class="ncorso">Corso di Web Engineering</div>
+<div class="aa">Progetti A.A. 2011/2012</div>
+<div class="nprogetto">Specifica 1</div>
+</section>
+<section class="specifica">
+<h1>Progetto "TestOnLine" <span class="versione">Versione 1.0</span></h1>
+<h2>Premessa</h2>
+<p>I progetti di fine corso si ispirano sempre ad esigenze
+reali, e fanno solitamente riferimento a tipologie di sito già presenti sulla
+rete. Nello svolgere il progetto, gli studenti dovranno attenersi alla
+specifica data in questo documento, ma potranno raffinarla tramite l'interazione
+col docente e l'analisi di siti web analoghi. In ogni caso, la realizzazione
+finale dovrà essere completamente originale. Le informazioni pubblicate
+dovranno essere sempre ben organizzate ed accessibili, date le varie tipologie
+di utenza associate alle applicazioni web pubbliche.</p>
+<h2>Specifiche del Sito</h2>
+<div><div>
+ <p>Il sito Test<em>OnLine</em> rappresenta un semplice sistema web per la definizione, la somministrazione e la valutazione di test.</p>
+ <p>Ciascun test gestito dal nostro sistema consisterà in una serie di quesiti a risposta multipla, con una sola risposta esatta e un numero arbitrario di risposte scorrette. Un quesito sarà a sua volta composto da un testo illustrativo (obbligatorio, <em>opzionalmente</em> contenente codice HTML di formattazione semplice, come i tag &lt;b&gt; e &lt;i&gt;) e da una serie opzionale di immagini illustrative (che potrebbero rappresentare, ad esempio, equazioni, grafi, ecc.), mentre le possibili risposte saranno composte da soli blocchi di testo, oltre a un flag che ne indichi l'esattezza.</p>
+ <p>Il sistema prevederà tre tipi di utenza: il coordinatore, il docente e lo studente.</p>
+</div></div>
+<p>Di seguito sono illustrati schematicamente i contenuti e le
+funzionalità minime che dovrebbero essere inseriti nel sito. Ovviamente, ogni
+ulteriore raffinamento o arricchimento di queste specifiche aumenterà il valore
+del progetto.</p>
+<div><div>
+ <ul>
+  <li><p>I docenti potranno inserire nuovi quesiti (o modificare i quesiti già inseriti), associandoli a uno dei settori didattici di riferimento preimpostati nel sistema, ad esempio "Reti di Calcolatori", "Tecnologie del Web" o "Algoritmi". Per ciascun quesito dovranno inoltre fornire una valutazione del livello di difficoltà, in scala 1-5, nell'ambito del settore prescelto, e ovviamente un insieme di risposte, tra cui almeno una dovrà essere indicata come corretta.</p></li>
+  <li><p>I coordinatori potranno gestire la lista dei settori didattici disponibili, accreditare nuovi docenti (cioè eseguirne la registrazione sul sistema), e creare i test.</p></li>
+  <li><p>Per creare i test, i coordinatori assegneranno loro un nome, il periodo di erogazione (cioè l'intervallo di giorni all'interno del quale potrà essere sostenuto) e le composizione, secondo una delle seguenti modalità:</p></li>
+ </ul>
+ <ol>
+  <li><p>indicando una serie di docenti e, per ciascuno di essi, uno dei settori didattici per i quali hanno predisposto dei quesiti, un livello di difficoltà e un numero di quesiti (ad esempio: 5 quesiti di livello 3 sulle Reti di Calcolatori redatti dal prof. X, 12 quesiti di livello 5 sulle Tecnologie del Web redatti dal prof. Y);</p></li>
+  <li><p>indicando solamente una serie di settori didattici con associato un livello di difficoltà e un numero di quesiti (ad esempio 5 quesiti di livello 3 sulle Reti di Calcolatori, 12 quesiti di livello 5 sulle Tecnologie del Web);</p></li>
+ </ol>
+ <p>In base alle scelte del coordinatore, il sistema dovrà verificare che un test della composizione data possa essere effettivamente generato (cioè se il numero e la tipologia di quesiti richiesti è effettivamente disponibile.).</p>
+ <ul>
+  <li><p>La durata di un test sarà calcolata automaticamente, in base alla sua composizione, secondo la formula <img src="Progetti%20IW%202012%20-1_file/image001.gif" alt="">, dove <em>T</em> è l'insieme dei quesiti componenti il test, <em>L(q)</em> è il livello di difficoltà del quesito <em>q</em> e <em>K(l)</em> restituisce il tempo (in minuti) concesso per risolvere un quesito di livello <em>l</em> (scelto da voi!).</p></li>
+  <li><p>La homepage del sito dovrà mostrare tutti i test in programma, evidenziando quelli che si terranno a breve. Ciascun test sarà descritto indicando il numero di quesiti contenuti, con il settore didattico ed eventualmente il nome del docente di riferimento, nonché dalla sua durata complessiva.</p></li>
+  <li><p>Gli studenti potranno registrarsi nel sistema fornendo le proprie credenziali (tra le quali è richiesto un indirizzo email e un numero di matricola), e poi iscriversi ai test in programma (non sarà ovviamente possibile iscriversi più di una volta allo stesso test, o iscriversi a test che si sono già tenuti).</p></li>
+  <li><p>In qualunque momento nell'intervallo di validità di un test, uno studente iscritto potrà connettersi, autenticarsi e sostenerlo.</p></li>
+  <li><p>Nel momento in cui uno studente richiederà di sostenere un test, il sistema ne genererà <em>un'istanza casuale</em> nel modo che segue:</p></li>
+ </ul>
+ <ol>
+  <li><p>nel caso in cui il test sia stato definito come al punto (1), il sistema selezionerà, per ciascuna tupla (<em>docente</em> , <em>settore</em> , <em>livello</em> , <em>numero</em> ) presente nella definizione del test stesso, un <em>numero</em> di quesiti (scelti a caso) tra quelli inseriti dal <em>docente</em> per quello specifico <em>settore</em> con il <em>livello</em> di difficoltà specificato;</p></li>
+  <li><p>nel caso in cui invece il test sia stato definito come al punto (2), il sistema selezionerà, per ciascuna tupla (<em>settore</em> , <em>livello</em> , <em>numero</em> ) presente nella definizione del test stesso, un <em>numero</em> di quesiti (scelti a caso) tra quelli inseriti da tutti i docenti per quello specifico <em>settore</em> con il <em>livello</em> di difficoltà specificato.</p></li>
+ </ol>
+ <p>In entrambi i casi, infine, il sistema selezionerà <em>casualmente</em> , tra le risposte possibili di ciascun quesito così prescelto, <em>tre risposte</em>, tra cui figuri sempre anche quella corretta.</p>
+ <ul>
+  <li><p>Il test verrà presentato allo studente come sequenza di quesiti, suddivisi per settore, con le risposte associate tra cui effettuare una scelta. Una volta avviato il test, lo studente potrà scegliere le risposte e poi sottometterle (tutte insieme) al sistema per la valutazione.</p></li>
+  <li><p>Se le risposte saranno inviate dopo la durata massima consentita (calcolata come visto sopra), il sistema rifiuterà il test, che non potrà essere più sostenuto. Se invece le risposte saranno fornite nei termini previsti, il sistema mostrerà all'utente un riepilogo delle domande, indicando la sua risposta e quella effettivamente esatta. I quesiti in cui la risposta data risulta scorretta saranno evidenziati. Alla fine del test, verrà riportato il punteggio finale calcolato assegnando un punto a ciascuna risposta esatta, -1 a ciascuna risposta errata e zero a ciascuna risposta non data.</p></li>
+  <li><p>Il voto dello studente per il particolare test sarà registrato nella base di dati del sistema, insieme al tempo impiegato per risolverlo e alla risposta data a ciascun quesito.</p></li>
+  <li><p>Il coordinatore potrà consultare in qualsiasi momento l'elenco dei risultati di ciascun test, corredato da qualche statistica significativa (ad esempio media punteggi, tempo medio di risoluzione del test, ecc.). Sarà inoltre possibile consultare voti e statistiche relative a tutti i test sostenuti da un particolare studente.</p></li>
+  <li><p><em>Opzionalmente</em>, è possibile fare in modo che ciascun docente possa visualizzare delle statistiche sui propri quesiti (ad esempio, numero di volte in cui il quesito è stato utilizzato in un test e numero di persone che hanno scelto la risposta giusta).</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Indicazioni per lo Sviluppo del Progetto
+</section>
+<section class="indicazioni">
+<h2>Tecnologie da utilizzare</h2>
+<ul>
+<li>La struttura base del sito va realizzata in HTML5. La validazione
+di tutte le pagine del sito rispetto alla tipologia di HTML prescelta è parte
+integrante dello sviluppo e <strong>deve</strong> essere riportata nella documentazione.</li>
+<li>Per la realizzazione del layout devono essere utilizzati il più
+possibile i figli di stile CSS. Il layout può liberamente basarsi su quelli
+disponibili in rete o utilizzati a lezione. Il grado di <strong>personalizzazione</strong>
+del layout sarà comunque tenuto in considerazione in sede di valutazione. <strong>Un
+layout responsive non è strettamente richiesto ma fortemente consigliato.</strong></li>
+<li>Per la programmazione lato <em>client</em> il linguaggio richiesto
+è JavaScript. Si possono liberamente includere nel progetto librerie sviluppate
+da terze parti, a patto che la loro portabilità cross-browser sia adeguata e
+che nella relazione siano citate e descritte. È in ogni caso <strong>sconsigliato
+l'abuso di tali tecnologie</strong> , soprattutto quando sia possibile sostituirle
+con un adeguato uso di HTML, CSS, ecc. <strong>In linea generale, il vostro sito
+dovrà essere utilizzabile anche con JavaScript disattivato.</strong> L'uso del sito
+senza script potrebbe essere meno &quot;agevole&quot; o permettere di accedere solo alle
+funzionalità &quot;vitali&quot;, ma non è consentito presentare siti la cui dinamica sia
+totalmente basata sull'uso degli script. È tuttavia <strong>ammissibile che gli
+script giochino un ruolo più importante nelle funzionalità la cui utenza è
+ristretta e predeterminata</strong> (ad esempio nelle funzionalità <em>back-end</em>
+per gli amministratori, ma non nel <em>front-end</em> pubblico del sito o in una
+procedura di login).</li>
+<li>Per la programmazione lato <em>server</em> è <strong>richiesto</strong> l'uso
+di Java (<em>servlet</em>), eventualmente associato a qualsiasi DBMS (se necessario)
+e a un <em>template engine</em> come<em>Freemarker</em>. Anche in questo caso è
+possibile avvalersi di librerie esterne.</li>
+<li>Il sito, in generale, deve funzionare ed avere un buon <em>rendering</em>
+sulle versioni più recenti di Edge, Firefox e Chrome, e <em>possibilmente</em>
+essere compatibile con i browser più datati (in questo caso non c'è bisogno che
+tutto funzioni perfettamente, ma almeno che le funzionalità <em>degradino bene</em>)
+e con le ultime versioni di altri browser, come Opera. Tale compatibilità <strong>deve</strong>
+essere esplicitamente dichiarata nella documentazione.</li>
+</ul>
+<h2>Svolgimento e Documentazione del Progetto</h2>
+<p>Le specifiche fornite potrebbero non risultare esaustive o
+completamente definite. Ogni funzionalità aggiunta o raffinata, anche tramite
+l'interazione con il committente o con gli utenti finali del sito, sarà
+adeguatamente valutata. Tutte le scelte progettuali vanno comunque discusse e
+motivate.</p>
+<p>Il progetto, svolto secondo le linee guida date dalle
+specifiche, dovrà essere consegnato nella forma di un sito web completamente
+funzionante, i cui contenuti e le cui caratteristiche saranno valutati in sede
+d'esame. Le parti della specifica marcate come <em>opzionali</em>, se omesse, non
+renderanno il progetto insufficiente ma non gli permetteranno comunque di
+raggiungere il massimo dei voti. Nel caso si decida di realizzarle, non sarà
+necessario che siano perfette o complete, ma che dimostrino chiaramente il
+vostro impegno nell'affrontare una tematica avanzata.</p>
+<p>La documentazione (<strong>in formato elettronico</strong>) che
+accompagna il progetto <strong>deve</strong> contenere almeno le seguenti informazioni:</p>
+<ul>
+<li>Indicazione delle dipendenze software (di quali librerie avete
+bisogno dal lato server e client?).</li>
+<li>Indicazione delle funzionalità realizzate e di quelle
+eventualmente non realizzate. Descrizione dettagliata delle eventuali
+funzionalità extra o opzionali inserite nel progetto.</li>
+<li>Diagramma che illustra la struttura e la navigabilità del sito.</li>
+<li>Schema relazionale della base di dati (se presente).</li>
+<li>Descrizione analitica del layout del sito, con indicazione delle
+sue principali componenti statiche/dinamiche.</li>
+<li>Descrizione delle eventuali tecnologie avanzate (linguaggi,
+framework, plugin, librerie, ...) utilizzate, del motivo per cui sono state
+adottate e del contributo effettivo che hanno dato alla realizzazione del
+progetto.</li>
+<li>Descrizione di <em>eventuali</em> problemi riscontrati nella
+fruizione del sito su browser differenti, lista dei browser compatibili.</li>
+<li>Screenshot delle pagine più importanti del sito (<em>opzionale</em>).</li>
+</ul>
+<p>Nel caso di gruppi di lavoro composti da più componenti, <em>il
+contributo effettivo offerto da ciascun componente</em> alla realizzazione
+finale <strong>deve</strong> essere descritto nella documentazione (indicando, ad
+esempio, chi si è dedicato prevalentemente alla programmazione server, chi ha
+realizzato il layout, chi ha programmato lato client, ecc.). In sede di esame,
+i responsabili potranno essere chiamati a riferire sugli aspetti loro delegati.</p>
+<h2>Valutazione del Progetto</h2>
+<p>Nel valutare il progetto consegnato saranno prese in
+considerazione le seguenti caratteristiche (in ordine di importanza):</p>
+<ol>
+<li>Rispetto delle specifiche.</li>
+<li>Correttezza tecnica.</li>
+<li>Chiarezza e correttezza organizzativa dei contenuti.</li>
+<li>Accessibilità e conformità agli standard.</li>
+<li>Uso appropriato di contenuti statici e dinamici.</li>
+<li>Qualità del design.</li>
+<li>Adeguatezza della documentazione.</li>
+</ol>
+<p>A questa valutazione si aggiungerà quella generale derivata
+dalla discussione del progetto in sede d'esame.</p>
+<h2>Ulteriori Informazioni</h2>
+<p>Questa specifica è disponibile in formato PDF sulla pagina
+web del corso di Web Engineering, all'indirizzo http://people.disim.univaq.it/dellapenna.
+Ulteriori informazioni e chiarimenti sulle specifiche possono essere richiesti
+direttamente via email all'indirizzo giuseppe.dellapenna@univaq.it.</p>
+<p>Si ricorda che i progetti vanno svolti in <em>piccoli</em> gruppi (tre persone è il numero consigliato).
+Eccezioni a questa regola andranno concordate direttamente col docente.</p>
+<p>An English translation of this project specification is also available on the teacher's website (http://people.disim.univaq.it/dellapenna). To access it, open the didactic page for this course, select &quot;English version&quot;, and go to the projects listing at the page bottom. If the translation is not there, ask the teacher to publish it 😄</p>
+</section>
+</body>
+</html>

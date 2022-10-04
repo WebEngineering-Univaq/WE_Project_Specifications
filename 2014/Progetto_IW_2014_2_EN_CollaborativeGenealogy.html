@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Final Course Projects</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<body>
+<section class="intestazione">
+<div class="ncorso">Web Engineering Course</div>
+<div class="aa">Final Projects A.Y. 2014/2015</div>
+<div class="nprogetto">Specification #2</div>
+</section>
+<h1>Project "CollaborativeGenealogy" <span class="versione">Version 1.0</span></h1>
+<h2>Preamble</h2>
+<p>The course projects are inspired by real-world needs, and they usually refer to similar sites already on the web. Students must follow the specifications given by this document, but they can also refine them through an interaction with the teacher and the analysis of similar websites. The final website must be completely original, well organized and easily accessible to all the users.</p>
+<h2>Site Specifications</h2>
+<div><div>
+ <p><em>CollaborativeGenealogy</em> is a social site to build your own family tree while contributing to the refinement of other users' one.</p>
+ <p>The site is accessible to registered users only. When registering, a new user must supply (and won't be able to change later) his/her full personal details, including date/place of birth and email address. Users can also provide their contact information (address, phone numbers, etc.) and, <em>optionally</em>, write and update a short textual biography and upload a photo for their profile. The "social" aspect of the system lies in the way family trees are built.</p>
+</div></div>
+<p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
+<div><div>
+ <ul>
+  <li><p>Anonymous users (the ones accessing to the site without logging in) can only see a simple presentation page, a login/registration form and a search form. The search is performed on first and last names of registered users, and the results only show the full name of the found users and the number of "relatives" in their family tree . In this way, anonymous users are able to "test" the usefulness of the service, without violating the privacy of registered users, and then register to use all the site functionalities.</p></li>
+  <li><p>Registered users, on the other hand, can search for other users by specifying different parameters, including first and last name (finding people with your last name is a good starting point to search for a possible relationship!), date and place of birth. The user should be able to combine these parameters to perform refined searches. The search results contain, in this case, name, surname, date and place of birth of each user found.</p></li>
+  <li><p>To create a family tree, the user can proceed in three ways. <em>Note</em> : to simplify the system, we assume that the user can add only direct relatives, i.e., <em>father, mother, sons</em> and<em>brothers/sisters</em> of people already in his/her family tree. Thus, to add the maternal grandfather, the user must first add his/her mother and then her father.</p></li>
+ </ul>
+ <ol>
+  <li><p>After performing a search and identifying some possible relatives, the user can add them to the family tree.</p></li>
+  <li><p>If a relative is not registered in the system, the user can create his/her basic profile (name, email address, date and place of birth) and add him/her to the family tree.</p></li>
+  <li><p>Finally, to handle relatives cannot be reached (or are dead), the user can also create a basic profile as specified above, <em>but without an email address</em> , and add it to the family tree. In this case, the added relationship will always be displayed by the system as "<em>unverified</em>".</p></li>
+ </ol>
+ <ul>
+  <li><p>In all cases, to actually add an relative to the family tree, the user must specify the tree position to attach the new relative to and the corresponding relationship (<em>father, mother, son, brother/sister</em>).</p></li>
+  <li><p>In cases 1 and 2, i.e., when adding a system-registered relative or manually specifying new one, the possible new family member has to approve the declared relationship. The relationship will not be considered effective and will not be shown in the genealogy of the user until the new relative validates it. Once the relationship is verified, the two users become part of the same "family" and can see all the biographical data of the other, as well as navigate his/her family tree.</p></li>
+  <li><p>The potential relative is notified by email (<em>hint: you don't need to send a real email, in this prototype it will be enough to show the text that you would send...</em> ) with the information of the "proposer" and the type of relationship proposed, which can be approved or rejected. Registered users (added as in case 1) will be able to log into their account and make this choice. Unregistered users (added as in step 2) will receive in the notification email an invitation to register and approve the relationship .</p></li>
+  <li><p>The system will eventually allow registered users to "navigate" their family tree, showing first the direct relationships and allowing the user to expand step by step the "relatives of relatives", and so on. This navigation will include the tree directly built by the user as well as the sub-trees built by his/her verified relatives. A <em>breadcrumb</em> system, i.e., a navigation path, will allow to derive the family relationship of the currently selected relative. As an example, on the main page of my profile, I click on my father, "Tom". The page then shows the path to the current relative "Me &gt; Tom (father)", the Tom's biographical data and all his direct relatives (mother, father, sons, brothers/systers). Then, clicking on his father "Dick" displays a page whose path is "Me &gt; Tom (father) &gt; Dick (father)", and so on. <em>Optionally</em>, you may attempt to automatically derive the overall relationship of the selected relative based on this path: in this case, for example, the page may show "Dick is your paternal grandfather".</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Directions for Project Development
+</section>
+<section class="indicazioni">
+<h2>Technologies</h2>
+<ul>
+<li>The basic structure of the site must be created using HTML5.The validation of all the site pages with respect to the chosen HTML flavour is an important part of the development and <strong>must</strong>be reported in the documentation.</li>
+<li>The site layout must be realised using CCS style sheets. The layout can be freely based on third party layouts available on the web or shown during the lectures. In this case, the degree of <strong>customization</strong>of the layout will be taken into account in the final project assessment. <strong>A responsive layout is not
+required, but strongly suggested.</strong></li>
+<li>For the <em>client-side</em> programming, JavaScript is the required language. It is possible to include libraries developed by third parties, provided that they have suitable cross-browser portability and that they are described in the project documentation. However, <strong>any
+abuse of these technologies is not recommended</strong> , especially when they can be replaced with a suitable use of HTML, CSS, etc. <strong>In general, your site should
+be functional also with JavaScript disabled</strong> . The site without scripts may be less &quot;friendly&quot; or allow the access to &quot;core&quot; functionalities only, but sites whose dynamics is entirely script-based are not allowed. However, <strong>scripts
+can play a more important a role in the functionalities whose users are restricted
+and pre-determined</strong> (e.g., in the <em>back-end</em> functionalities for administrators, but not in the public <em>front-end</em>or in the login procedure).</li>
+<li>For the <em>server-side</em> programming, Java <em>(servlets,
+JSP)</em> is the <strong>required</strong> language*.* Any DBMS and template engine can be employed, if required*.*Again, it is possible to rely on
+external libraries.</li>
+<li>In general, the site must work and have a good <em>rendering</em> on the latest versions of Edge, Firefox and Chrome, and <em>possibly</em> be compatible with older browsers (in this case it should at least *degrade
+well)*and with the latest versions of other browsers, like Opera. Browser
+compatibility <strong>must</strong>be explicitly stated in the documentation.</li>
+</ul>
+<h2>Project Development and Documentation</h2>
+<p>The specifications may not be exhaustive or completely defined. Every feature added or refined, also through an interaction with the stakeholder or the site end users, should be adequately discussed. All the design choices must be discussed and motivated.</p>
+<p>The final project, developed following the guidelines given by the present specification, must be a fully functional website, whose contents and features will be assessed during the examination. The specification parts marked as <em>optional</em>, if not developed, will not make the project insufficient but, on the other hand, they will not allow your project to reach the highest mark. If you choose to implement an optional feature, the result should not be necessarily perfect or complete: it must only show your commitment to deal with an advanced issue.</p>
+<p>The documentation (<strong>in electronic format</strong> ) which accompanies the project <strong>must</strong>contain at least the following information:</p>
+<ul>
+<li>Indication of software dependencies (which libraries are required on the client and server side?).</li>
+<li>Indication of the functionalities that have been developed or not developed. Detailed description of any extra or optional functionality added to the project.</li>
+<li>Diagram showing the site structure.</li>
+<li>Relational schema of the database (if any).</li>
+<li>Analytical description of the site layout, also indicating its static/dynamic components.</li>
+<li>Description of any advanced technology (language, framework, plugin, library, etc.) used in the project, specifying the reason of its adoption and the actual contribution given to the project development.</li>
+<li>Description of <em>any</em>cross-browser programming/rendering problem encountered, list of compatible browsers.</li>
+<li>Screenshots of the most important website pages (<em>optional</em>).</li>
+</ul>
+<p><em>The actual contribution of each group member</em> to the project <strong>must</strong>be declared in the documentation (indicating, for example, the members that mainly worked on server and client side programming, the layout designer, etc.). During the examination, each group member will describe its part of the realisation.</p>
+<h2>Project Evaluation</h2>
+<p>To evaluate the project, the following issues will be considered (in order of importance):</p>
+<ol>
+<li>Compliance with the specifications.</li>
+<li>Technical correctness.</li>
+<li>Organizational clarity and correctness of the contents.</li>
+<li>Accessibility and standards compliance.</li>
+<li>Appropriate use of static and dynamic contents.</li>
+<li>Design quality.</li>
+<li>Adequacy of the documentation.</li>
+</ol>
+<p>This evaluation will be combined with the result of the project discussion.</p>
+<h2>Additional Information</h2>
+<p>This specification is available in PDF format on the website of the Web Engineering course at the address http://people.disim.univaq.it/dellapenna. Additional information on the specifications can be obtained directly via email by writing to giuseppe.dellapenna@univaq.it.</p>
+<p>Please note that projects should be carried out by <em>small</em> student groups (three members is the recommended number). Exceptions to this rule must be agreed with the teacher.</p>
+</section>
+</body>
+</html>

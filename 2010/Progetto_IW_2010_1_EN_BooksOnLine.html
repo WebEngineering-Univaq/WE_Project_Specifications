@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Final Course Projects</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<body>
+<section class="intestazione">
+<div class="ncorso">Web Engineering Course</div>
+<div class="aa">Final Projects A.Y. 2010/2011</div>
+<div class="nprogetto">Specification #1</div>
+</section>
+<h1>Project "BooksOnLine" <span class="versione">Version 1.0</span></h1>
+<h2>Preamble</h2>
+<p>The course projects are inspired by real-world needs, and they usually refer to similar sites already on the web. Students must follow the specifications given by this document, but they can also refine them through an interaction with the teacher and the analysis of similar websites. The final website must be completely original, well organized and easily accessible to all the users.</p>
+<h2>Site Specifications</h2>
+<div><div>
+ <p>The <em>BooksOnLine</em> websiteis a simple web interface for a library.</p>
+ <p>The website database contains information on the books, the library (registered) users and the book loans. In particular, for every book we have the ISBN, title, language, publisher, year of publication, the names of all authors and, <em>optionally</em>, a review or a short description (like the one that often appears on the back cover of the book). A set of <em>tags</em> , i.e. words or short phrases (e.g., "computer", "programming", "C++ language", etc.), is also associated to each volume and can be, e.g., extracted from the book title and/or entered by librarians. Each book has a maximum loan duration (default: one month) and may be present in the library in multiple copies. Finally, some books are marked "free to read" and therefore accessible directly online in the form of downloadable text or PDF files. For each book, the site generates a description page containing all the above information, suitably organized.</p>
+ <p>The site is accessed by of three types of users: <em>librarians, registered users</em> and <em>anonymous</em> <em>users</em> . Appropriate login procedures must be provided. <strong>We assume that only librarians can add new users (including other librarians) to the system</strong> (which is initialized with a single default "root librarian"), e.g., it may be possible to register a new user when he/she deposits his/her credentials to the library. Each registered user is associated with a profile containing some basic personal data, an email address and a phone number.</p>
+</div></div>
+<p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
+<div><div>
+ <ul>
+  <li><p>Users must be able to search for books based on: (1) their title or part of it, (2) the associated <em>tags</em> , (3) one or more of the authors, (4) the ISBN. The completeness and versatility of the search function, which is an essential element of this kind of site, are left to the initiative of the students. The search results should be presented as a list showing title, author, publisher and year of each book found. Clicking on a listed book opens the corresponding description page.</p></li>
+  <li><p>On the description page of a book, users must be able to click on an author's name to automatically start a search for all the books written by him/her (i.e., his/her complete bibliography).</p></li>
+  <li><p>On the description page of a book, and in general wherever <em>tags</em> appear, users must be able to click on one of them to automatically start a search for all the associated books.</p></li>
+  <li><p>On the description page of a book, users must read the number of copies in the library and the number of those copies which are currently free (not borrowed). <em>Optionally,</em> if all the copies are on loan, the site may indicate the expected return date of the first copy, calculated from the date of the loan and the maximum loan duration.</p></li>
+  <li><p>Librarians, after having looked up a particular book (using the search functions listed above) must be able to register a loan on behalf of a user known to the system.</p></li>
+  <li><p>Registered users can view the list of books that they have borrowed and the corresponding return date. The books whose return date has expired should be appropriately marked. Users may also view the entire list of books already borrowed and returned (<em>loan history</em>).</p></li>
+  <li><p>Librarians must be able, from the description page of a book, to view all the related loans, past or present. In addition, librarians can view a list of all the books on loan, where those whose return date is expired are suitably highlighted.</p></li>
+  <li><p>The site homepage shows some general information, such as the most borrowed books and the books recently added to the library. For registered users, the homepage also reminds the books to be returned shortly.</p></li>
+  <li><p>The site must be provided with adequate <em>backoffice,</em> accessible only to librarians, which allows to enter and edit all the data associated with the books.</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Directions for Project Development
+</section>
+<section class="indicazioni">
+<h2>Technologies</h2>
+<ul>
+<li>The basic structure of the site must be created using HTML5.The validation of all the site pages with respect to the chosen HTML flavour is an important part of the development and <strong>must</strong>be reported in the documentation.</li>
+<li>The site layout must be realised using CCS style sheets. The layout can be freely based on third party layouts available on the web or shown during the lectures. In this case, the degree of <strong>customization</strong>of the layout will be taken into account in the final project assessment. <strong>A responsive layout is not
+required, but strongly suggested.</strong></li>
+<li>For the <em>client-side</em> programming, JavaScript is the required language. It is possible to include libraries developed by third parties, provided that they have suitable cross-browser portability and that they are described in the project documentation. However, <strong>any
+abuse of these technologies is not recommended</strong> , especially when they can be replaced with a suitable use of HTML, CSS, etc. <strong>In general, your site should
+be functional also with JavaScript disabled</strong> . The site without scripts may be less &quot;friendly&quot; or allow the access to &quot;core&quot; functionalities only, but sites whose dynamics is entirely script-based are not allowed. However, <strong>scripts
+can play a more important a role in the functionalities whose users are restricted
+and pre-determined</strong> (e.g., in the <em>back-end</em> functionalities for administrators, but not in the public <em>front-end</em>or in the login procedure).</li>
+<li>For the <em>server-side</em> programming, Java <em>(servlets,
+JSP)</em> is the <strong>required</strong> language*.* Any DBMS and template engine can be employed, if required*.*Again, it is possible to rely on
+external libraries.</li>
+<li>In general, the site must work and have a good <em>rendering</em> on the latest versions of Edge, Firefox and Chrome, and <em>possibly</em> be compatible with older browsers (in this case it should at least *degrade
+well)*and with the latest versions of other browsers, like Opera. Browser
+compatibility <strong>must</strong>be explicitly stated in the documentation.</li>
+</ul>
+<h2>Project Development and Documentation</h2>
+<p>The specifications may not be exhaustive or completely defined. Every feature added or refined, also through an interaction with the stakeholder or the site end users, should be adequately discussed. All the design choices must be discussed and motivated.</p>
+<p>The final project, developed following the guidelines given by the present specification, must be a fully functional website, whose contents and features will be assessed during the examination. The specification parts marked as <em>optional</em>, if not developed, will not make the project insufficient but, on the other hand, they will not allow your project to reach the highest mark. If you choose to implement an optional feature, the result should not be necessarily perfect or complete: it must only show your commitment to deal with an advanced issue.</p>
+<p>The documentation (<strong>in electronic format</strong> ) which accompanies the project <strong>must</strong>contain at least the following information:</p>
+<ul>
+<li>Indication of software dependencies (which libraries are required on the client and server side?).</li>
+<li>Indication of the functionalities that have been developed or not developed. Detailed description of any extra or optional functionality added to the project.</li>
+<li>Diagram showing the site structure.</li>
+<li>Relational schema of the database (if any).</li>
+<li>Analytical description of the site layout, also indicating its static/dynamic components.</li>
+<li>Description of any advanced technology (language, framework, plugin, library, etc.) used in the project, specifying the reason of its adoption and the actual contribution given to the project development.</li>
+<li>Description of <em>any</em>cross-browser programming/rendering problem encountered, list of compatible browsers.</li>
+<li>Screenshots of the most important website pages (<em>optional</em>).</li>
+</ul>
+<p><em>The actual contribution of each group member</em> to the project <strong>must</strong>be declared in the documentation (indicating, for example, the members that mainly worked on server and client side programming, the layout designer, etc.). During the examination, each group member will describe its part of the realisation.</p>
+<h2>Project Evaluation</h2>
+<p>To evaluate the project, the following issues will be considered (in order of importance):</p>
+<ol>
+<li>Compliance with the specifications.</li>
+<li>Technical correctness.</li>
+<li>Organizational clarity and correctness of the contents.</li>
+<li>Accessibility and standards compliance.</li>
+<li>Appropriate use of static and dynamic contents.</li>
+<li>Design quality.</li>
+<li>Adequacy of the documentation.</li>
+</ol>
+<p>This evaluation will be combined with the result of the project discussion.</p>
+<h2>Additional Information</h2>
+<p>This specification is available in PDF format on the website of the Web Engineering course at the address http://people.disim.univaq.it/dellapenna. Additional information on the specifications can be obtained directly via email by writing to giuseppe.dellapenna@univaq.it.</p>
+<p>Please note that projects should be carried out by <em>small</em> student groups (three members is the recommended number). Exceptions to this rule must be agreed with the teacher.</p>
+</section>
+</body>
+</html>

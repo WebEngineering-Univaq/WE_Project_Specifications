@@ -7,11 +7,14 @@
 
 <body>
 
-<div class="intestazione">
-<div class="nprogetto">${numero!""}</div>
+<body>
+<section class="intestazione">
 <div class="ncorso">${nomecorso} Course</div>
 <div class="aa">Final Projects A.Y. ${anno}/${(anno?number)+1}</div>
-</div>
+<div class="nprogetto">Specification #${numero!""}</div>
+</section>
+
+
 
 <h1>Project "${titolo}" <span class="versione">Version ${versione!"1.0"}</span></h1>
 
@@ -25,7 +28,22 @@ The course projects are inspired by real-world needs, and they usually refer to 
 
 The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.
 
+<#if (body_operazioni??)>
+
 <div>${body_operazioni?no_esc}</div>
+
+
+</#if>
+
+</section>
+
+<#if !(nosvolgimento??)>
+
+<section class="break intestazione">
+Directions for Project Development
+</section>
+
+<section class="indicazioni">
 
 ## Technologies
 
@@ -81,9 +99,19 @@ This specification is available in PDF format on the website of the Web Engineer
 
 Please note that projects should be carried out by *small* student groups (three members is the recommended number). Exceptions to this rule must be agreed with the teacher.  
 
+
+</section>
+
+</#if>
+
+
 <#if (scheda??)>
-## Project Summary Card
-{.break}
+
+<section class="break intestazione">
+Project Summary Card
+</section>
+
+<section class="scheda">
 
 This summary should be compiled and sent to the teacher, in electronic format, *before* the examination. A copy of this form should be also attached to the project documentation.
 

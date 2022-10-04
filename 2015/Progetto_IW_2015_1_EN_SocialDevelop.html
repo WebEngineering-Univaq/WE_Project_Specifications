@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Final Course Projects</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<body>
+<section class="intestazione">
+<div class="ncorso">Web Engineering Course</div>
+<div class="aa">Final Projects A.Y. 2015/2016</div>
+<div class="nprogetto">Specification #1</div>
+</section>
+<h1>Project "SocialDevelop" <span class="versione">Version 1.0</span></h1>
+<h2>Preamble</h2>
+<p>The course projects are inspired by real-world needs, and they usually refer to similar sites already on the web. Students must follow the specifications given by this document, but they can also refine them through an interaction with the teacher and the analysis of similar websites. The final website must be completely original, well organized and easily accessible to all the users.</p>
+<h2>Site Specifications</h2>
+<div><div>
+ <p><em>SocialDevelop</em> is a web support tool for collaborative software development. While other sites like GitHub focus on the actual code writing and versioning, our system stays on a "meta" level, namely its aim is to publicize the software projects and identify suitable freelance developers to employ, automatically creating their "references".</p>
+ <p>The site is similar to a regular forum, but instead of discussion threads, SocialDevelop contains <em>projects</em>.</p>
+ <p>Each project has a <em>coordinator</em> and is associated with a set of <em>tasks</em> , i.e., activities to accomplish. Each task is accompanied by a textual <em>description</em> , the required <em>number of collaborators</em> (i.e., people to employ on the task), and the <em>time frame</em> for its completion.</p>
+ <p>Moreover, each task also has a <em>type</em> (very general, and chosen from a predefined list, such as "development", "graphics", "documentation", etc.) and a list of <em>skills</em> it requires, each one associated with a <em>level of expertise</em> (from 1 to 10, for example, "C++ programming" level 8, or "Responsive design" level 5, etc.). These skills are also chosen from a predefined list, specific to the task type.</p>
+ <p>Finally, a task can be <em>open</em> or <em>closed</em>. A closed task does not accept further collaborators, unless they are added directly by the project coordinator. On the other hand, developers, as described later, can send applications requests for open tasks. A task is considered closed if it already has the required number of collaborators or if the coordinator has explicitly closed it. Otherwise, it is open.</p>
+ <p>Messages (announcements, requests, and internal discussions) can be posted within projects, and they can be marked as public, i.e., visible to any user, or private, i.e., visible only to the project collaborators.</p>
+ <p>The site has an administrator who is only responsible of entering/editing the list of task types and the list of skills associated with each task type (<em>optionally</em> , you may associate the same skill to more than one task type). Skills may <em>optionally</em> have a hierarchical structure (for example, "Design Swing Interfaces" could be a "son" of "Java Programming") to organize them better. A skill, as already described, can be generic or very specific, and can be associated with tasks and with user profiles, as we will see.</p>
+ <p>The users of our site, that we shall call <em>developers,</em> must register themselves by providing their personal and contact information and their curriculum (as plain text or uploaded as a PDF file). They should also indicate their skills, chosen among the global list of skills available in the system, specifying for each of them the achieved level of expertise (through the same scale used for the skills associated with tasks, as specified above). For example, a developer could declare a level-7 skill in "Java Programming".</p>
+</div></div>
+<p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
+<div><div>
+ <ul>
+  <li><p>All the users, including the <em>anonymous</em> ones, can browse the list of projects, see the related tasks (both as a compact list and in a detailed view) and read the public messages posted in the projects.</p></li>
+  <li><p>All the users, including the anonymous ones, can search on <em>SocialDevelop</em> in two ways:</p></li>
+ </ul>
+ <ol>
+  <li><p>Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;</p></li>
+  <li><p>Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.</p></li>
+ </ol>
+ <ul>
+  <li><p>Anonymous users can register on <em>SocialDevelop</em> to become registered users, i.e., developers. During the registration process, developers must provide their personal and contact details, their curriculum and their skills, as already described in this specification.</p></li>
+  <li><p>The public profile of a developer shows, in addition to the above-described information, a list of <em>automatic references</em> generated from the projects he/she has worked or is working on. In particular, such references show the project name, the specific task(s) the developer was involved in, and an evaluation (when the task is complete) given by the project coordinator, whose name and email address are also included.</p></li>
+  <li><p>Developers enrolled in a project can read all messages, both public and private, posted in the project, and post new messages.</p></li>
+  <li><p>Every developer can create new projects, becoming their coordinator, and populate them with tasks. The definition of projects, tasks and skill requirements must follow the structure already illustrated in this specification. The coordinator should also be able, at any time, to modify the project, for example changing the dates or the skills associated with a task, increasing the number of collaborators required, etc.</p></li>
+  <li><p>The project coordinator, once a task is fully defined, should be able to view a list of developers suitable for that task (that is, with suitable skills), automatically generated by appropriately using the search function (1) described above.</p></li>
+  <li><p>The project coordinator can send to any registered developer a <em>collaboration proposal</em> for a particular task. Such proposal will be then included in the "<em>invitations panel</em>" of the coordinator that reports, for each proposal, the associated task, the contacted the developer, the proposal submission date and its status ( "waiting", "accepted" or "rejected"). The coordinator can cancel a proposal at any time.</p></li>
+  <li><p>Each developer has a "<em>proposals panel</em> " that lists all the collaboration proposals sent by project coordinators as just described. The developer should be able to see the details of the associated project and task, and then accept or decline the proposal. The proposals not considered (i.e., accepted or declined) will be automatically declined after a certain period. If a developer accepts a proposal the system, after changing the status of the proposal in the "<em>invitations panel</em> " of the coordinator and in the "<em>proposals panel</em>" of the developer, automatically enrolls him/her in the project and assigned task and decreases accordingly the number of collaborators required for that task.</p></li>
+  <li><p>Developers also have an "<em>offers panel</em> " that shows an automatic selection of the collaboration opportunities suitable for their skills. In other words, the system will search and show automatically (using a search system similar to the (1)) the <em>open tasks</em> having skills compatible with those of the developer. Developers should be able to send <em>application requests</em>for these offers to the corresponding project coordinator. In this case, the offer status in the panel will change from "available" to "applied". According to the coordinator's decision, the status will then become "accepted" or "rejected". An application request can be cancelled at any time.</p></li>
+  <li><p>The project coordinator has an "<em>applications panel</em> " that lists all the application requests received, with the indication of the developer and task. From here, the coordinator can browse to view the developer profile, and then accept or reject the application. If accepted, the application status will change both in the "<em>applications panel</em> " of the coordinator and in the "<em>offers panel</em>" of the developer, who will be automatically enrolled in project/task, as already described.</p></li>
+  <li><p><em>Optionally</em> , every status update in the "<em>invitations</em> " "<em>offers</em> " and "<em>applications</em>" panels just described may generate a notification email sent to the corresponding user. For example, a coordinator will be notified when one of his/her offers is accepted or rejected by a developer or when a developer applies for one of his/her projects, while a developer will be notified of the results of his/her application requests.</p></li>
+  <li><p>The project coordinator may, at any time, exclude a developer from a task (e.g., if he/she is not working as required), de-enrolling him/her and eventually reopening the corresponding task to new applications requests (i.e., increasing by one the number of collaborators required by the task).</p></li>
+  <li><p>At the end of a task, the project coordinator has the opportunity to evaluate (on a scale 1-5) all the developers that collaborated to it. This evaluation, as explained above, will then appear in the developer profile.</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Directions for Project Development
+</section>
+<section class="indicazioni">
+<h2>Technologies</h2>
+<ul>
+<li>The basic structure of the site must be created using HTML5.The validation of all the site pages with respect to the chosen HTML flavour is an important part of the development and <strong>must</strong>be reported in the documentation.</li>
+<li>The site layout must be realised using CCS style sheets. The layout can be freely based on third party layouts available on the web or shown during the lectures. In this case, the degree of <strong>customization</strong>of the layout will be taken into account in the final project assessment. <strong>A responsive layout is not
+required, but strongly suggested.</strong></li>
+<li>For the <em>client-side</em> programming, JavaScript is the required language. It is possible to include libraries developed by third parties, provided that they have suitable cross-browser portability and that they are described in the project documentation. However, <strong>any
+abuse of these technologies is not recommended</strong> , especially when they can be replaced with a suitable use of HTML, CSS, etc. <strong>In general, your site should
+be functional also with JavaScript disabled</strong> . The site without scripts may be less &quot;friendly&quot; or allow the access to &quot;core&quot; functionalities only, but sites whose dynamics is entirely script-based are not allowed. However, <strong>scripts
+can play a more important a role in the functionalities whose users are restricted
+and pre-determined</strong> (e.g., in the <em>back-end</em> functionalities for administrators, but not in the public <em>front-end</em>or in the login procedure).</li>
+<li>For the <em>server-side</em> programming, Java <em>(servlets,
+JSP)</em> is the <strong>required</strong> language*.* Any DBMS and template engine can be employed, if required*.*Again, it is possible to rely on
+external libraries.</li>
+<li>In general, the site must work and have a good <em>rendering</em> on the latest versions of Edge, Firefox and Chrome, and <em>possibly</em> be compatible with older browsers (in this case it should at least *degrade
+well)*and with the latest versions of other browsers, like Opera. Browser
+compatibility <strong>must</strong>be explicitly stated in the documentation.</li>
+</ul>
+<h2>Project Development and Documentation</h2>
+<p>The specifications may not be exhaustive or completely defined. Every feature added or refined, also through an interaction with the stakeholder or the site end users, should be adequately discussed. All the design choices must be discussed and motivated.</p>
+<p>The final project, developed following the guidelines given by the present specification, must be a fully functional website, whose contents and features will be assessed during the examination. The specification parts marked as <em>optional</em>, if not developed, will not make the project insufficient but, on the other hand, they will not allow your project to reach the highest mark. If you choose to implement an optional feature, the result should not be necessarily perfect or complete: it must only show your commitment to deal with an advanced issue.</p>
+<p>The documentation (<strong>in electronic format</strong> ) which accompanies the project <strong>must</strong>contain at least the following information:</p>
+<ul>
+<li>Indication of software dependencies (which libraries are required on the client and server side?).</li>
+<li>Indication of the functionalities that have been developed or not developed. Detailed description of any extra or optional functionality added to the project.</li>
+<li>Diagram showing the site structure.</li>
+<li>Relational schema of the database (if any).</li>
+<li>Analytical description of the site layout, also indicating its static/dynamic components.</li>
+<li>Description of any advanced technology (language, framework, plugin, library, etc.) used in the project, specifying the reason of its adoption and the actual contribution given to the project development.</li>
+<li>Description of <em>any</em>cross-browser programming/rendering problem encountered, list of compatible browsers.</li>
+<li>Screenshots of the most important website pages (<em>optional</em>).</li>
+</ul>
+<p><em>The actual contribution of each group member</em> to the project <strong>must</strong>be declared in the documentation (indicating, for example, the members that mainly worked on server and client side programming, the layout designer, etc.). During the examination, each group member will describe its part of the realisation.</p>
+<h2>Project Evaluation</h2>
+<p>To evaluate the project, the following issues will be considered (in order of importance):</p>
+<ol>
+<li>Compliance with the specifications.</li>
+<li>Technical correctness.</li>
+<li>Organizational clarity and correctness of the contents.</li>
+<li>Accessibility and standards compliance.</li>
+<li>Appropriate use of static and dynamic contents.</li>
+<li>Design quality.</li>
+<li>Adequacy of the documentation.</li>
+</ol>
+<p>This evaluation will be combined with the result of the project discussion.</p>
+<h2>Additional Information</h2>
+<p>This specification is available in PDF format on the website of the Web Engineering course at the address http://people.disim.univaq.it/dellapenna. Additional information on the specifications can be obtained directly via email by writing to giuseppe.dellapenna@univaq.it.</p>
+<p>Please note that projects should be carried out by <em>small</em> student groups (three members is the recommended number). Exceptions to this rule must be agreed with the teacher.</p>
+</section>
+</body>
+</html>

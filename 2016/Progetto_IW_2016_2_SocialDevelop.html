@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html><head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Progetti di Fine Corso</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<section class="intestazione">
+<div class="ncorso">Corso di Web Engineering</div>
+<div class="aa">Progetti A.A. 2016/2017</div>
+<div class="nprogetto">Specifica 2</div>
+</section>
+<section class="specifica">
+<h1>Progetto "SocialDevelop" <span class="versione">Versione 1.0</span></h1>
+<h2>Premessa</h2>
+<p>I progetti di fine corso si ispirano sempre ad esigenze
+reali, e fanno solitamente riferimento a tipologie di sito già presenti sulla
+rete. Nello svolgere il progetto, gli studenti dovranno attenersi alla
+specifica data in questo documento, ma potranno raffinarla tramite l'interazione
+col docente e l'analisi di siti web analoghi. In ogni caso, la realizzazione
+finale dovrà essere completamente originale. Le informazioni pubblicate
+dovranno essere sempre ben organizzate ed accessibili, date le varie tipologie
+di utenza associate alle applicazioni web pubbliche.</p>
+<h2>Specifiche del Sito</h2>
+<div><div>
+ <h2>Specifiche del Sito</h2>
+ <p>Il sito <em>SocialDevelop</em> rappresenta uno strumento di supporto allo sviluppo di software in maniera collaborativa. Mentre altri siti, come GitHub, si concentrano sulla scrittura vera e propria del codice e sul suo <em>versioning</em>, il nostro sistema si pone un obiettivo più a monte, cioè quello di pubblicizzare le idee di sviluppo e individuare gli sviluppatori freelance più adatti per entrare in ciascun progetto, creando anche un sistema di "referenze".</p>
+ <p><em>Grazie a Konstantinos, Svetoslav, Petyo e Danail per avermi suggerito questa idea</em> <em>J</em></p>
+ <p>La struttura del sito sarà simile a quella di un forum, ma invece dei <em>thread</em> (discussioni) su <em>SocialDevelop</em> verranno creati dei <em>progetti</em> . Ciascun progetto avrà un <em>coordinatore</em> e sarà associato a dei <em>task</em>, cioè attività da realizzare per completarlo.</p>
+ <p>Un <em>task</em> sarà corredato da una <em>descrizione</em> testuale, dal <em>numero di collaboratori</em> che dovranno lavorarci, e da un <em>intervallo temporale</em> fissato per il suo completamento. Ogni <em>task</em> , inoltre, avrà un <em>tipo</em> (molto generico e scelto da una lista predefinita, come "sviluppo", "grafica", "documentazione", ecc.) e un elenco di capacità (che chiameremo <em>skill</em> ) richieste a chi ci lavorerà, ognuna con un <em>livello</em> minimo di competenza (diciamo da 1 a 10, ad esempio "Programmazione C++" livello 8, oppure "Responsive design" livello 5, ecc.). Gli <em>skill</em> andranno scelti anch'essi da una lista predefinita, specifica per il tipo di <em>task</em> . Infine, un <em>task</em> potrà essere <em>aperto</em> o <em>chiuso</em> . Un <em>task</em> chiuso non accetta ulteriori collaboratori, a meno che questi non vengano aggiunti direttamente dal coordinatore. A <em>task</em> aperto, invece, potranno essere inviate domande di collaborazione, come descritto più avanti. Un <em>task</em> sarà considerato chiuso se ha già il numero richiesto di collaboratori o se è stato chiuso esplicitamente dal coordinatore. Negli altri casi, sarà aperto.</p>
+ <p>All'interno di un progetto, infine, potranno essere postati messaggi (annunci, richieste, discussioni interne) sia pubblici, cioè visibili da ogni utente, sia privati, cioè visibili solo dagli iscritti al progetto.</p>
+ <p>Il sito avrà un amministratore al quale spetterà solo il compito di inserire/modificare la lista dei tipi di <em>task</em> e la lista di <em>skill</em> associati ad ogni tipo (<em>opzionalmente</em> , è possibile associare uno <em>skill</em> anche a più di un tipo). Per questi ultimi, sarebbe <em>opzionalmente</em> utile dare una struttura gerarchica (ad esempio "Design interfacce Swing" potrebbe essere un "figlio" di "Programmazione Java"), per meglio organizzarne la ricerca. Uno <em>skill</em> , come già descritto, è una competenza, generica o molto specifica, che potrà poi essere associata ai <em>task</em> e anche ai profili utente, come vedremo.</p>
+ <p>Gli utenti del sito, che chiameremo <em>sviluppatori</em> (in senso lato, potrebbero anche essere dei grafici) dovranno inizialmente registrarsi fornendo, oltre ai loro dati anagrafici e di contatto, anche il loro curriculum in forma testuale oppure come PDF da caricare nel sistema. Gli sviluppatori dovranno inoltre elencare i loro <em>skill</em> , scelti dalla lista globale di <em>skill</em> presenti nel sistema, indicando per ciascuno il livello di competenza raggiunto (con la stessa scala usata per gli <em>skill</em> associati ai <em>task</em> , come specificato sopra). Ad esempio, uno sviluppatore potrebbe dichiarare un livello 7 nello <em>skill</em> "Programmazione Java".</p>
+</div></div>
+<p>Di seguito sono illustrati schematicamente i contenuti e le
+funzionalità minime che dovrebbero essere inseriti nel sito. Ovviamente, ogni
+ulteriore raffinamento o arricchimento di queste specifiche aumenterà il valore
+del progetto.</p>
+<div><div>
+ <ul>
+  <li><p>Tutti gli utenti, anche<em>anonimi,</em> potranno navigare nella lista dei progetti, visualizzare i relativi <em>task</em> (sia in una lista compatta che in una visualizzazione di dettaglio) e leggere i soli messaggi pubblici postati nei progetti stessi.</p></li>
+  <li><p>Tutti gli utenti, anche anonimi, avranno la possibilità di effettuare ricerche su <em>SocialDevelop</em> secondo due modalità:</p></li>
+ </ul>
+ <ol>
+  <li><p>ricerca di sviluppatori: si potranno indicare una serie di <em>skill</em> (sempre prelevate dalla lista globale del sistema) e <em>opzionalmente</em> un livello minimo di competenza per ciascuna di esse. Il sistema restituirà quindi la lista dei profili degli sviluppatori aventi tutte quelle <em>skill</em>, con un livello di competenza maggiore o uguale a quello richiesto, se specificato;</p></li>
+  <li><p>ricerca di progetti: si potranno inserire delle parole chiave e il sistema restituirà la lista dei progetti presenti su <em>SocialDevelop</em> aventi quelle parole nel nome o nella descrizione.</p></li>
+ </ol>
+ <ul>
+  <li><p>Gli utenti anonimi potranno registrarsi divenendo così utenti registrati o <em>sviluppatori</em> . Nel processo di registrazione lo sviluppatore dovrà fornire i propri dati anagrafici, di contatto nonché il proprio curriculum e le proprie <em>skill</em>, come già descritto in questa specifica.</p></li>
+  <li><p>Il profilo di ogni sviluppatore mostrerà, oltre alle informazioni inserite in fase di registrazione, anche una lista di referenze automatiche generate sulla base dei progetti in cui ha lavorato o sta lavorando. Per ciascuna collaborazione verrà indicato il <em>task</em> su cui lo sviluppatore ha lavorato e la valutazione (quando il <em>task</em> è terminato) data dal coordinatore del progetto, del quale sarà presente anche il nome e l'indirizzo email, per approfondire la referenza.</p></li>
+  <li><p>Gli sviluppatori iscritti a un progetto potranno leggere tutti i messaggi, sia pubblici che privati, inerenti il progetto stesso, e postarne di nuovi.</p></li>
+  <li><p>Ogni sviluppatore potrà creare nuovi progetti, divenendone il <em>coordinatore</em> , e popolarli con i relativi <em>task</em> . La definizione di un progetto, dei suoi <em>task</em> e delle <em>skill</em> richieste dovrà seguire la struttura precedentemente illustrata in questa specifica. Il coordinatore di un progetto potrà inoltre, in qualsiasi momento, modificare il progetto, ad esempio cambiando le date o le <em>skill</em> associate a un <em>task</em>, variando il numero di collaboratori richiesti, ecc.</p></li>
+  <li><p>Il coordinatore di un progetto, una volta definito completamente un <em>task</em> , potrà visualizzare la lista degli sviluppatori potenzialmente adatti a quel <em>task</em> (cioè con <em>skill</em>corrispondenti) ottenuta automaticamente sfruttando in maniera opportuna la funzione di ricerca (1) già illustrata.</p></li>
+  <li><p>Il coordinatore di un progetto potrà inviare a qualsiasi sviluppatore una proposta di collaborazione su un particolare <em>task</em> . La proposta sarà inserita in un apposito "<em>pannello degli inviti</em> " visibile al coordinatore che riporterà, per ciascuna proposta, il <em>task</em> associato, lo sviluppatore contattato, la data di invio della proposta e il suo stato ("in attesa", "accettata" o "rifiutata"). Il coordinatore potrà annullare una proposta di collaborazione in qualsiasi momento.</p></li>
+  <li><p>Gli sviluppatori disporranno di un proprio "<em>pannello delle proposte</em> " che elencherà tutte le proposte di collaborazione inviate dai coordinatori di progetto come appena descritto. Per ciascuna proposta dovrà essere possibile navigare sul relativo progetto e <em>task</em> (per visualizzarne i dettagli), accettarla o declinarla. Le offerte non valutate (cioè non accettate o declinate) saranno automaticamente considerate declinate dopo un certo periodo di tempo. Se uno sviluppatore accetta un'offerta di collaborazione il sistema, oltre a cambiare lo stato della relativa proposta nel "<em>pannello degli inviti</em> " del coordinatore e nel "<em>pannello delle proposte</em> " dello sviluppatore, iscriverà automaticamente lo sviluppatore al progetto e al <em>task</em> assegnatogli e diminuirà di conseguenza il conteggio degli sviluppatori richiesti per quel <em>task</em>.</p></li>
+  <li><p>Gli sviluppatori avranno a disposizione anche un "<em>pannello delle offerte</em> " che riporterà una selezione automatica delle possibilità di collaborazione coerenti con le loro <em>skill</em> . In altre parole, il sistema ricercherà e mostrerà automaticamente (usando un sistema di ricerca simile a quello (1)) i <em>task aperti</em> aventi <em>skill</em> compatibili con quelli dello sviluppatore. Selezionata un'offerta, lo sviluppatore potrà inviare una domanda di adesione al coordinatore del relativo progetto. Nel pannello, lo stato dell'offerta cambierà da "disponibile" a "adesione richiesta". In base alla successiva decisione del coordinatore, lo stato potrà poi divenire "accolta" o "rigettata". Una domanda di adesione potrà essere ritirata in qualsiasi momento.</p></li>
+  <li><p>I coordinatori di un progetto avranno a disposizione un <em>"pannello delle domande"</em> di collaborazione che elencherà le domande ricevute come descritto al punto precedente, con lo sviluppatore e il <em>task</em> associati. Da qui potranno navigare per analizzare nel dettaglio il profilo del candidato e potranno poi accogliere o rigettare la domanda. Se accettata, la domanda provocherà in cambio di stato nel "<em>pannello delle domande</em> " del coordinatore e nel "<em>pannello delle offerte</em> " del candidato, nonché l'iscrizione immediata del candidato al progetto/<em>task</em>, come già descritto.</p></li>
+  <li><p><em>Opzionalmente</em>, potrete fare in modo che ogni aggiornamento di stato nei pannelli "inviti", "offerte" e "domande" appena descritti generi anche un'email di notifica inviata al rispettivo utente. Ad esempio, un coordinatore riceverà una notifica quando una sua offerta viene accettata o rigettata, o quando uno sviluppatore fa domanda di adesione a un suo progetto, mentre uno sviluppatore riceverà una notifica del risultato di una sua domanda di adesione.</p></li>
+  <li><p>Il coordinatore di un progetto potrà in qualsiasi momento escludere uno sviluppatore da un <em>task</em> (nel caso non lavori come richiesto), de-iscrivendolo ed eventualmente riaprendo il corrispondente <em>task</em> a nuove domande di collaborazione (in pratica, aumentando di uno il numero di persone richieste dal <em>task</em>).</p></li>
+  <li><p>Alla conclusione di un <em>task</em>, il coordinatore di un progetto avrà la possibilità di valutare (su una scala 1-5) tutti gli sviluppatori che vi hanno collaborato. Questa valutazione, come già illustrato, comparirà nel profilo degli sviluppatori.</p></li>
+ </ul>
+</div></div>
+</section>
+<section class="break intestazione">
+Indicazioni per lo Sviluppo del Progetto
+</section>
+<section class="indicazioni">
+<h2>Tecnologie da utilizzare</h2>
+<ul>
+<li>La struttura base del sito va realizzata in HTML5. La validazione
+di tutte le pagine del sito rispetto alla tipologia di HTML prescelta è parte
+integrante dello sviluppo e <strong>deve</strong> essere riportata nella documentazione.</li>
+<li>Per la realizzazione del layout devono essere utilizzati il più
+possibile i figli di stile CSS. Il layout può liberamente basarsi su quelli
+disponibili in rete o utilizzati a lezione. Il grado di <strong>personalizzazione</strong>
+del layout sarà comunque tenuto in considerazione in sede di valutazione. <strong>Un
+layout responsive non è strettamente richiesto ma fortemente consigliato.</strong></li>
+<li>Per la programmazione lato <em>client</em> il linguaggio richiesto
+è JavaScript. Si possono liberamente includere nel progetto librerie sviluppate
+da terze parti, a patto che la loro portabilità cross-browser sia adeguata e
+che nella relazione siano citate e descritte. È in ogni caso <strong>sconsigliato
+l'abuso di tali tecnologie</strong> , soprattutto quando sia possibile sostituirle
+con un adeguato uso di HTML, CSS, ecc. <strong>In linea generale, il vostro sito
+dovrà essere utilizzabile anche con JavaScript disattivato.</strong> L'uso del sito
+senza script potrebbe essere meno &quot;agevole&quot; o permettere di accedere solo alle
+funzionalità &quot;vitali&quot;, ma non è consentito presentare siti la cui dinamica sia
+totalmente basata sull'uso degli script. È tuttavia <strong>ammissibile che gli
+script giochino un ruolo più importante nelle funzionalità la cui utenza è
+ristretta e predeterminata</strong> (ad esempio nelle funzionalità <em>back-end</em>
+per gli amministratori, ma non nel <em>front-end</em> pubblico del sito o in una
+procedura di login).</li>
+<li>Per la programmazione lato <em>server</em> è <strong>richiesto</strong> l'uso
+di Java (<em>servlet</em>), eventualmente associato a qualsiasi DBMS (se necessario)
+e a un <em>template engine</em> come<em>Freemarker</em>. Anche in questo caso è
+possibile avvalersi di librerie esterne.</li>
+<li>Il sito, in generale, deve funzionare ed avere un buon <em>rendering</em>
+sulle versioni più recenti di Edge, Firefox e Chrome, e <em>possibilmente</em>
+essere compatibile con i browser più datati (in questo caso non c'è bisogno che
+tutto funzioni perfettamente, ma almeno che le funzionalità <em>degradino bene</em>)
+e con le ultime versioni di altri browser, come Opera. Tale compatibilità <strong>deve</strong>
+essere esplicitamente dichiarata nella documentazione.</li>
+</ul>
+<h2>Svolgimento e Documentazione del Progetto</h2>
+<p>Le specifiche fornite potrebbero non risultare esaustive o
+completamente definite. Ogni funzionalità aggiunta o raffinata, anche tramite
+l'interazione con il committente o con gli utenti finali del sito, sarà
+adeguatamente valutata. Tutte le scelte progettuali vanno comunque discusse e
+motivate.</p>
+<p>Il progetto, svolto secondo le linee guida date dalle
+specifiche, dovrà essere consegnato nella forma di un sito web completamente
+funzionante, i cui contenuti e le cui caratteristiche saranno valutati in sede
+d'esame. Le parti della specifica marcate come <em>opzionali</em>, se omesse, non
+renderanno il progetto insufficiente ma non gli permetteranno comunque di
+raggiungere il massimo dei voti. Nel caso si decida di realizzarle, non sarà
+necessario che siano perfette o complete, ma che dimostrino chiaramente il
+vostro impegno nell'affrontare una tematica avanzata.</p>
+<p>La documentazione (<strong>in formato elettronico</strong>) che
+accompagna il progetto <strong>deve</strong> contenere almeno le seguenti informazioni:</p>
+<ul>
+<li>Indicazione delle dipendenze software (di quali librerie avete
+bisogno dal lato server e client?).</li>
+<li>Indicazione delle funzionalità realizzate e di quelle
+eventualmente non realizzate. Descrizione dettagliata delle eventuali
+funzionalità extra o opzionali inserite nel progetto.</li>
+<li>Diagramma che illustra la struttura e la navigabilità del sito.</li>
+<li>Schema relazionale della base di dati (se presente).</li>
+<li>Descrizione analitica del layout del sito, con indicazione delle
+sue principali componenti statiche/dinamiche.</li>
+<li>Descrizione delle eventuali tecnologie avanzate (linguaggi,
+framework, plugin, librerie, ...) utilizzate, del motivo per cui sono state
+adottate e del contributo effettivo che hanno dato alla realizzazione del
+progetto.</li>
+<li>Descrizione di <em>eventuali</em> problemi riscontrati nella
+fruizione del sito su browser differenti, lista dei browser compatibili.</li>
+<li>Screenshot delle pagine più importanti del sito (<em>opzionale</em>).</li>
+</ul>
+<p>Nel caso di gruppi di lavoro composti da più componenti, <em>il
+contributo effettivo offerto da ciascun componente</em> alla realizzazione
+finale <strong>deve</strong> essere descritto nella documentazione (indicando, ad
+esempio, chi si è dedicato prevalentemente alla programmazione server, chi ha
+realizzato il layout, chi ha programmato lato client, ecc.). In sede di esame,
+i responsabili potranno essere chiamati a riferire sugli aspetti loro delegati.</p>
+<h2>Valutazione del Progetto</h2>
+<p>Nel valutare il progetto consegnato saranno prese in
+considerazione le seguenti caratteristiche (in ordine di importanza):</p>
+<ol>
+<li>Rispetto delle specifiche.</li>
+<li>Correttezza tecnica.</li>
+<li>Chiarezza e correttezza organizzativa dei contenuti.</li>
+<li>Accessibilità e conformità agli standard.</li>
+<li>Uso appropriato di contenuti statici e dinamici.</li>
+<li>Qualità del design.</li>
+<li>Adeguatezza della documentazione.</li>
+</ol>
+<p>A questa valutazione si aggiungerà quella generale derivata
+dalla discussione del progetto in sede d'esame.</p>
+<h2>Ulteriori Informazioni</h2>
+<p>Questa specifica è disponibile in formato PDF sulla pagina
+web del corso di Web Engineering, all'indirizzo http://people.disim.univaq.it/dellapenna.
+Ulteriori informazioni e chiarimenti sulle specifiche possono essere richiesti
+direttamente via email all'indirizzo giuseppe.dellapenna@univaq.it.</p>
+<p>Si ricorda che i progetti vanno svolti in <em>piccoli</em> gruppi (tre persone è il numero consigliato).
+Eccezioni a questa regola andranno concordate direttamente col docente.</p>
+<p>An English translation of this project specification is also available on the teacher's website (http://people.disim.univaq.it/dellapenna). To access it, open the didactic page for this course, select &quot;English version&quot;, and go to the projects listing at the page bottom. If the translation is not there, ask the teacher to publish it 😄</p>
+</section>
+</body>
+</html>

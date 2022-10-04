@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html><head>
+<meta charset="UTF-8"/>
+<title>Web Engineering: Progetti di Fine Corso</title>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+</head>
+<body>
+<section class="intestazione">
+<div class="ncorso">Corso di Web Engineering</div>
+<div class="aa">Progetti A.A. 2013/2014</div>
+<div class="nprogetto">Specifica 1</div>
+</section>
+<section class="specifica">
+<h1>Progetto "SimplestNote" <span class="versione">Versione 1.0</span></h1>
+<h2>Premessa</h2>
+<p>I progetti di fine corso si ispirano sempre ad esigenze
+reali, e fanno solitamente riferimento a tipologie di sito già presenti sulla
+rete. Nello svolgere il progetto, gli studenti dovranno attenersi alla
+specifica data in questo documento, ma potranno raffinarla tramite l'interazione
+col docente e l'analisi di siti web analoghi. In ogni caso, la realizzazione
+finale dovrà essere completamente originale. Le informazioni pubblicate
+dovranno essere sempre ben organizzate ed accessibili, date le varie tipologie
+di utenza associate alle applicazioni web pubbliche.</p>
+<h2>Specifiche del Sito</h2>
+<div><div>
+ <p>Il sito <em>SimplestNote</em> rappresenta un semplice blocco note online, con possibilità di condivisione delle note.</p>
+ <p>Il sito dovrà essere accessibile solo a un'utenza registrata. Ciascun utente avrà a disposizione un blocco note virtuale, composto da un numero arbitrario di pagine, che di seguito chiameremo semplicemente <em>note</em> , ognuna dotata di titolo e contenuto, entrambi testuali. La lunghezza del titolo può essere limitata, mentre quella del contenuto dovrebbe essere illimitata. Le singole note saranno inoltre associate alla data di creazione, la data di ultima modifica, il numero di versione (corrispondente al numero di volte in cui la nota è stata modificata) e a un numero arbitrario di <em>tag</em> , intesi come parole o brevi sequenze di parole (ad esempio "<em>novità</em> ", "<em>lavoro</em> " o "<em>corrispondenza privata</em>").</p>
+ <p>Il sistema provvederà a salvare tutte le versioni di ciascuna nota, in modo da prevenire modifiche involontarie e fornire una storia della sua stesura. Sarà possibile condividere una nota con altri utenti del sistema, facendola apparire nei loro blocchi ed eventualmente permettendone la modifica.</p>
+</div></div>
+<p>Di seguito sono illustrati schematicamente i contenuti e le
+funzionalità minime che dovrebbero essere inseriti nel sito. Ovviamente, ogni
+ulteriore raffinamento o arricchimento di queste specifiche aumenterà il valore
+del progetto.</p>
+<div><div>
+ <ul>
+  <li><p>Gli utenti potranno registrarsi su <em>SimplestNote</em> fornendo i propri dati e un indirizzo email valido (il controllo di validità, effettuabile inviando un'email con un link da cliccare per la verifica dell'indirizzo, è <em>opzionale</em>) e ricevendo delle credenziali di accesso. L'indirizzo email sarà usato come username, mentre la password dovrà essere generata in maniera casuale al momento della registrazione.</p></li>
+  <li><p>Una volta effettuata la login, l'utente potrà consultare la lista delle proprie note (mostrate con titolo e data di ultima modifica). Selezionando una nota si aprirà la vista di lettura/editing della stessa. L'interfaccia dovrà inoltre permettere la creazione di nuove note (con un titolo iniziale "standard" predefinito, magari basato sulla data/ora correnti) e l'eliminazione delle note esistenti.</p></li>
+  <li><p>La vista di lettura/editing per una nota dovrà permettere la modifica del titolo, del contenuto nonché dei tag. <em>Opzionalmente</em>, quando si aggiunge un tag, il sistema potrebbe suggerire uno dei tag già utilizzati dall'utente in altre note, oltre che permettere l'inserimento di un nuovo tag sotto forma di breve testo.</p></li>
+  <li><p>Ad ogni modifica, il sistema salverà prima lo stato corrente della nota (titolo, contenuto, tag, data di ultima modifica) in una <em>history</em>, e solo a questo punto applicherà le modifiche richieste (salvando il nuovo stato della nota, incrementando il numero di versione, aggiornando la data di ultima modifica). In questo modo la history sarà via via popolata con tutte le versioni precedenti della nota stessa.</p></li>
+  <li><p>Dovrà essere possibile accedere alla history di ogni singola nota, visualizzando il numero di versione e la data di modifica di tutte le sue versioni precedenti. Cliccando su un elemento della history, sarà possibile vedere titolo, contenuto e tag della nota per quella versione, ma <em>in sola lettura</em>.</p></li>
+  <li><p>Dovrà essere possibile condividere una nota con altri utenti dello stesso sistema, specificandone l'indirizzo email utilizzato per la registrazione. La condivisione sarà effettuabile in sola lettura o in lettura/scrittura. Un utente vedrà le note condivise con lui all'interno della propria lista note, evidenziate in modo da renderne chiara la provenienza (indirizzo email del proprietario) e i permessi di accesso (lettura o lettura/scrittura). Le note condivise in sola lettura potranno essere lette ma non modificate. Su quelle in lettura/scrittura sarà possibile effettuare ogni tipo di modifica, esattamente come per le note di cui si è proprietari. Il proprietario di una nota condivisa potrà interromperne la condivisione in qualsiasi momento.</p></li>
+  <li><p><em>Opzionalmente</em> , potrete realizzare l'<em>endpoint</em> per un eventuale client mobile del nostro servizio: un semplice sistema di esportazione JSON delle note.</p></li>
+ </ul>
+ <p>Il sito dovrà rispondere a due URL speciali, che indicheremo rispettivamente con <em>http://server.it/notepad/getList?user=email&amp;pass=password</em> e con <em>http://server.it/notepad/getNote?user=email&amp;pass=password &amp;note=ID.</em></p>
+ <p>Chiamando la prima, il server dovrà restituire una struttura JSON (attenzione al <em>content type</em> !) che rappresenta la lista di tutte le note dell'utente avente l'<em>email</em> specificata, autenticato tramite la <em>password</em> inserita anch'essa nella URL. Ovviamente, in caso di problemi con l'autenticazione, la risposta sarà vuota. La lista dovrà contenere, per ogni nota, il suo ID (chiaramente il vostro sistema dovrà dotare ogni nota di un identificatore per inserirlo nella base di dati) e il titolo.</p>
+ <p>Chiamando invece la seconda URL, verrà restituita una struttura JSON contenente data di creazione, data di modifica, numero di versione, titolo, contenuto e tags della nota specificata dall'ID inserito nella URL stessa e appartenente all'utente autenticato con le credenziali specificate. <em>Nota bene:</em> in un'applicazione reale, trasmettere username e password ad ogni chiamata del servizio sarebbe poco efficiente e sicuro, ma qui utilizzeremo quest'approccio per semplificare l'implementazione.</p>
+</div></div>
+</section>
+<section class="break intestazione">
+Indicazioni per lo Sviluppo del Progetto
+</section>
+<section class="indicazioni">
+<h2>Tecnologie da utilizzare</h2>
+<ul>
+<li>La struttura base del sito va realizzata in HTML5. La validazione
+di tutte le pagine del sito rispetto alla tipologia di HTML prescelta è parte
+integrante dello sviluppo e <strong>deve</strong> essere riportata nella documentazione.</li>
+<li>Per la realizzazione del layout devono essere utilizzati il più
+possibile i figli di stile CSS. Il layout può liberamente basarsi su quelli
+disponibili in rete o utilizzati a lezione. Il grado di <strong>personalizzazione</strong>
+del layout sarà comunque tenuto in considerazione in sede di valutazione. <strong>Un
+layout responsive non è strettamente richiesto ma fortemente consigliato.</strong></li>
+<li>Per la programmazione lato <em>client</em> il linguaggio richiesto
+è JavaScript. Si possono liberamente includere nel progetto librerie sviluppate
+da terze parti, a patto che la loro portabilità cross-browser sia adeguata e
+che nella relazione siano citate e descritte. È in ogni caso <strong>sconsigliato
+l'abuso di tali tecnologie</strong> , soprattutto quando sia possibile sostituirle
+con un adeguato uso di HTML, CSS, ecc. <strong>In linea generale, il vostro sito
+dovrà essere utilizzabile anche con JavaScript disattivato.</strong> L'uso del sito
+senza script potrebbe essere meno &quot;agevole&quot; o permettere di accedere solo alle
+funzionalità &quot;vitali&quot;, ma non è consentito presentare siti la cui dinamica sia
+totalmente basata sull'uso degli script. È tuttavia <strong>ammissibile che gli
+script giochino un ruolo più importante nelle funzionalità la cui utenza è
+ristretta e predeterminata</strong> (ad esempio nelle funzionalità <em>back-end</em>
+per gli amministratori, ma non nel <em>front-end</em> pubblico del sito o in una
+procedura di login).</li>
+<li>Per la programmazione lato <em>server</em> è <strong>richiesto</strong> l'uso
+di Java (<em>servlet</em>), eventualmente associato a qualsiasi DBMS (se necessario)
+e a un <em>template engine</em> come<em>Freemarker</em>. Anche in questo caso è
+possibile avvalersi di librerie esterne.</li>
+<li>Il sito, in generale, deve funzionare ed avere un buon <em>rendering</em>
+sulle versioni più recenti di Edge, Firefox e Chrome, e <em>possibilmente</em>
+essere compatibile con i browser più datati (in questo caso non c'è bisogno che
+tutto funzioni perfettamente, ma almeno che le funzionalità <em>degradino bene</em>)
+e con le ultime versioni di altri browser, come Opera. Tale compatibilità <strong>deve</strong>
+essere esplicitamente dichiarata nella documentazione.</li>
+</ul>
+<h2>Svolgimento e Documentazione del Progetto</h2>
+<p>Le specifiche fornite potrebbero non risultare esaustive o
+completamente definite. Ogni funzionalità aggiunta o raffinata, anche tramite
+l'interazione con il committente o con gli utenti finali del sito, sarà
+adeguatamente valutata. Tutte le scelte progettuali vanno comunque discusse e
+motivate.</p>
+<p>Il progetto, svolto secondo le linee guida date dalle
+specifiche, dovrà essere consegnato nella forma di un sito web completamente
+funzionante, i cui contenuti e le cui caratteristiche saranno valutati in sede
+d'esame. Le parti della specifica marcate come <em>opzionali</em>, se omesse, non
+renderanno il progetto insufficiente ma non gli permetteranno comunque di
+raggiungere il massimo dei voti. Nel caso si decida di realizzarle, non sarà
+necessario che siano perfette o complete, ma che dimostrino chiaramente il
+vostro impegno nell'affrontare una tematica avanzata.</p>
+<p>La documentazione (<strong>in formato elettronico</strong>) che
+accompagna il progetto <strong>deve</strong> contenere almeno le seguenti informazioni:</p>
+<ul>
+<li>Indicazione delle dipendenze software (di quali librerie avete
+bisogno dal lato server e client?).</li>
+<li>Indicazione delle funzionalità realizzate e di quelle
+eventualmente non realizzate. Descrizione dettagliata delle eventuali
+funzionalità extra o opzionali inserite nel progetto.</li>
+<li>Diagramma che illustra la struttura e la navigabilità del sito.</li>
+<li>Schema relazionale della base di dati (se presente).</li>
+<li>Descrizione analitica del layout del sito, con indicazione delle
+sue principali componenti statiche/dinamiche.</li>
+<li>Descrizione delle eventuali tecnologie avanzate (linguaggi,
+framework, plugin, librerie, ...) utilizzate, del motivo per cui sono state
+adottate e del contributo effettivo che hanno dato alla realizzazione del
+progetto.</li>
+<li>Descrizione di <em>eventuali</em> problemi riscontrati nella
+fruizione del sito su browser differenti, lista dei browser compatibili.</li>
+<li>Screenshot delle pagine più importanti del sito (<em>opzionale</em>).</li>
+</ul>
+<p>Nel caso di gruppi di lavoro composti da più componenti, <em>il
+contributo effettivo offerto da ciascun componente</em> alla realizzazione
+finale <strong>deve</strong> essere descritto nella documentazione (indicando, ad
+esempio, chi si è dedicato prevalentemente alla programmazione server, chi ha
+realizzato il layout, chi ha programmato lato client, ecc.). In sede di esame,
+i responsabili potranno essere chiamati a riferire sugli aspetti loro delegati.</p>
+<h2>Valutazione del Progetto</h2>
+<p>Nel valutare il progetto consegnato saranno prese in
+considerazione le seguenti caratteristiche (in ordine di importanza):</p>
+<ol>
+<li>Rispetto delle specifiche.</li>
+<li>Correttezza tecnica.</li>
+<li>Chiarezza e correttezza organizzativa dei contenuti.</li>
+<li>Accessibilità e conformità agli standard.</li>
+<li>Uso appropriato di contenuti statici e dinamici.</li>
+<li>Qualità del design.</li>
+<li>Adeguatezza della documentazione.</li>
+</ol>
+<p>A questa valutazione si aggiungerà quella generale derivata
+dalla discussione del progetto in sede d'esame.</p>
+<h2>Ulteriori Informazioni</h2>
+<p>Questa specifica è disponibile in formato PDF sulla pagina
+web del corso di Web Engineering, all'indirizzo http://people.disim.univaq.it/dellapenna.
+Ulteriori informazioni e chiarimenti sulle specifiche possono essere richiesti
+direttamente via email all'indirizzo giuseppe.dellapenna@univaq.it.</p>
+<p>Si ricorda che i progetti vanno svolti in <em>piccoli</em> gruppi (tre persone è il numero consigliato).
+Eccezioni a questa regola andranno concordate direttamente col docente.</p>
+<p>An English translation of this project specification is also available on the teacher's website (http://people.disim.univaq.it/dellapenna). To access it, open the didactic page for this course, select &quot;English version&quot;, and go to the projects listing at the page bottom. If the translation is not there, ask the teacher to publish it 😄</p>
+</section>
+</body>
+</html>

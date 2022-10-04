@@ -5,12 +5,13 @@
 </head>
 
 <body>
-<div class="intestazione">
-<div class="nprogetto">${numero!""}</div>
+<section class="intestazione">
 <div class="ncorso">Corso di ${nomecorso}</div>
 <div class="aa">Progetti A.A. ${anno}/${(anno?number)+1}</div>
-</div>
+<div class="nprogetto">Specifica ${numero!""}</div>
+</section>
 
+<section class="specifica">
 <h1>Progetto "${titolo}" <span class="versione">Versione ${versione!"1.0"}</span></h1>
 
 ## Premessa
@@ -33,7 +34,21 @@ funzionalità minime che dovrebbero essere inseriti nel sito. Ovviamente, ogni
 ulteriore raffinamento o arricchimento di queste specifiche aumenterà il valore
 del progetto.
 
+<#if (body_operazioni??)>
+
 <div>${body_operazioni?no_esc}</div>
+
+</#if>
+
+</section>
+
+<#if !(nosvolgimento??)>
+
+<section class="break intestazione">
+Indicazioni per lo Sviluppo del Progetto
+</section>
+
+<section class="indicazioni">
 
 ## Tecnologie da utilizzare
 
@@ -60,13 +75,13 @@ ristretta e predeterminata** (ad esempio nelle funzionalità *back-end*
 per gli amministratori, ma non nel *front-end* pubblico del sito o in una
 procedura di login).
 - Per la programmazione lato *server* è **richiesto** l'uso
-di Java (*servlet* ), eventualmente associato a qualsiasi DBMS (se necessario)
+di Java (*servlet*), eventualmente associato a qualsiasi DBMS (se necessario)
 e a un *template engine* come*Freemarker*. Anche in questo caso è
 possibile avvalersi di librerie esterne.
 - Il sito, in generale, deve funzionare ed avere un buon *rendering*
 sulle versioni più recenti di Edge, Firefox e Chrome, e *possibilmente*
 essere compatibile con i browser più datati (in questo caso non c'è bisogno che
-tutto funzioni perfettamente, ma almeno che le funzionalità *degradino bene* )
+tutto funzioni perfettamente, ma almeno che le funzionalità *degradino bene*)
 e con le ultime versioni di altri browser, come Opera. Tale compatibilità **deve**
 essere esplicitamente dichiarata nella documentazione.  
 
@@ -87,7 +102,7 @@ raggiungere il massimo dei voti. Nel caso si decida di realizzarle, non sarà
 necessario che siano perfette o complete, ma che dimostrino chiaramente il
 vostro impegno nell'affrontare una tematica avanzata.
 
-La documentazione (**in formato elettronico** ) che
+La documentazione (**in formato elettronico**) che
 accompagna il progetto **deve** contenere almeno le seguenti informazioni:
 - Indicazione delle dipendenze software (di quali librerie avete
 bisogno dal lato server e client?).
@@ -140,9 +155,18 @@ Eccezioni a questa regola andranno concordate direttamente col docente.
 
 An English translation of this project specification is also available on the teacher's website (http://people.disim.univaq.it/dellapenna). To access it, open the didactic page for this course, select "English version", and go to the projects listing at the page bottom. If the translation is not there, ask the teacher to publish it :smile:
 
+</section>
+
+</#if>
+
+
 <#if (scheda??)>
-## Scheda Sintetica
-{.break}
+
+<section class="break intestazione">
+Scheda Sintetica
+</section>
+
+<section class="scheda">
 
 La scheda sintetica va compilata ed inviata al docente, in
 forma elettronica, *prima* di sostenere l'esame. Una sua copia va inoltre
@@ -199,7 +223,10 @@ allegata alla documentazione del progetto.
 **Data di consegna del progetto:**  &nbsp;
 {.linetocompile}
 
+</section>
+
 </#if>
 
 
-</body></html>
+</body>
+</html>
