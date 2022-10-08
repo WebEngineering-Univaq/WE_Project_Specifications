@@ -10,7 +10,6 @@ thisfile: specifica
 ---
 
 -------
-
 {#specifiche}
 
 Il sito *JobWeb* rappresenta un semplice portale per lo
@@ -42,7 +41,6 @@ seguenti:
   delle lingue scritte e/o parlate.
 
 -------
-
 {#operazioni}
 
 - Il sito dovrà prevedere tre tipologie di utenza: amministratori,
@@ -61,24 +59,17 @@ seguenti:
 - Ogni utente che abbia pubblicato il proprio curriculum potrà
   specificare anche una serie di informazioni riguardanti le proprie preferenze
   in ambito lavorativo. In particolare, dovrà essere possibile specificare:
-
-- Il tipo di impiego ricercato (ad esempio *part time*, a
+   - Il tipo di impiego ricercato (ad esempio *part time*, a
   tempo indeterminato, di livello dirigenziale, ecc.; è possibile proporre una
   lista da cui spuntare una o più caratteristiche) e in che ambito/settore (ed
   esempio nel settore dell'informatica: anche qui è possibile prevedere una lista
   a scelta multipla).
+   - La provincia/regione preferita per l'impiego.
+   - La propria disponibilità a viaggiare in Italia o all'estero.
+   - La propria disponibilità a soggiornare per brevi o lunghi periodi all'estero.
 
-- La provincia/regione preferita per l'impiego.
-
-- La propria disponibilità a viaggiare in Italia o all'estero.
-
-- La propria disponibilità a soggiornare per brevi o lunghi periodi
-  all'estero.
-
-- Il sito dovrà prevedere due formati di visualizzazione per i
-  curriculum:
-
-- La prima visualizzazione, detta *pubblica*, mostrerà solo
+- Il sito dovrà prevedere due formati di visualizzazione per i   curriculum:
+   - La prima visualizzazione, detta *pubblica*, mostrerà solo
   alcune parti selezionate del curriculum, escludendo tutti i dati sensibili. In
   particolare, nella parte anagrafica verranno mostrati solo l'età e il sesso (i
   curriculum saranno anonimi in questa modalità!), mentre nella sezione
@@ -86,8 +77,7 @@ seguenti:
   denominazione del titolo stesso e la data di acquisizione. Le esperienze
   lavorative e la sezione capacità/conoscenze saranno invece riportate per
   intero.
-
-- La seconda visualizzazione, detta *completa*, conterrà
+   - La seconda visualizzazione, detta *completa*, conterrà
   invece tutti i dettagli del curriculum inserito dall'utente.
 
 - In entrambi i casi, al curriculum sarà accodata una piccola

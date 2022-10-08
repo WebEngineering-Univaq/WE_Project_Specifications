@@ -36,9 +36,9 @@ The users of our site, that we shall call *developers,* must register themselves
 - All the users, including the *anonymous* ones, can browse the list of projects, see the related tasks (both as a compact list and in a detailed view) and read the public messages posted in the projects.
 
 - All the users, including the anonymous ones, can search on *SocialDevelop* in two ways:
-1. Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;
-
-2. Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.
+   1. Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;
+   2. Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.
+   
 - Anonymous users can register on *SocialDevelop* to become registered users, i.e., developers. During the registration process, developers must provide their personal and contact details, their curriculum and their skills, as already described in this specification.
 
 - The public profile of a developer shows, in addition to the above-described information, a list of *automatic references* generated from the projects he/she has worked or is working on. In particular, such references show the project name, the specific task(s) the developer was involved in, and an evaluation (when the task is complete) given by the project coordinator, whose name and email address are also included.

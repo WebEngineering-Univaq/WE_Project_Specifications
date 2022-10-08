@@ -18,24 +18,13 @@ un titolo, un testo di apertura e uno di chiusura, e sarà composto da una serie
 di domande. Ciascuna domanda, a sua volta, potrà essere di una delle seguenti
 tipologie:
 
-1) *Testo
-   breve*: una riga di testo;
-
-2) *Testo
-   lungo*: più righe di testo;
-
-3) *Numero*:
-   solo numeri;
-
-4) *Data*:
-   solo date, opzionalmente con ora associata;
-
-5) *Scelta
-   singola*: vengono presentate una serie di opzioni e l'utente deve sceglierne
+1) *Testo   breve*: una riga di testo;
+2) *Testo   lungo*: più righe di testo;
+3) *Numero*:   solo numeri;
+4) *Data*:   solo date, opzionalmente con ora associata;
+5) *Scelta  singola*: vengono presentate una serie di opzioni e l'utente deve sceglierne
    esattamente una;
-
-6) *Scelta
-   multipla*: vengono presentate una serie di opzioni e l'utente può sceglierne
+6) *Scelta   multipla*: vengono presentate una serie di opzioni e l'utente può sceglierne
    una o più.
 
 Tutti i tipi di domanda appena elencati avranno degli
@@ -48,15 +37,12 @@ risposte nel caso delle domande a scelta multipla). Altri attributi specifici
 potranno essere aggiunti a ciascun tipo di domanda per definirla meglio, ad
 esempio
 
-· Lunghezza minima e massima di un campo di testo;
-
-· *Valore* *minimo e massimo* per i campi numerici (e
+- Lunghezza minima e massima di un campo di testo;
+- *Valore* *minimo e massimo* per i campi numerici (e
 magari anche per quelli data);
-
-· *Espressione regolare* che deve fare match con un campo di
+- *Espressione regolare* che deve fare match con un campo di
 testo;
-
-· Numero minimo e/o massimo di opzioni selezionabili per le scelte
+- Numero minimo e/o massimo di opzioni selezionabili per le scelte
 multiple.
 
 Questi attributi sono tutti *opzionali*, ma più ne
@@ -104,9 +90,7 @@ efficiente possibile, e associate alle risposte in maniera altrettanto efficace.
   primo caso (sondaggio *riservato* ), il responsabile dovrà inserire
   manualmente nel sistema i dati (nome, email, password) dei partecipanti che
   potranno accedere al sondaggio. *Opzionalmente* , questi dati potrebbero
-  essere anche importati da un file CSV.   
-
-*Nota bene: ogni sondaggio avrà il suo insieme di partecipanti, quindi gli
+  essere anche importati da un file CSV.  *Nota bene: ogni sondaggio avrà il suo insieme di partecipanti, quindi gli
 utenti inseriti in un sondaggio non potranno accedere ad altri sondaggi, a meno
 che non siano registrati (replicandone i dati) anche in questi ultimi.* Nel
 caso invece il sondaggio sia *pubblico*, chiunque potrà accedervi, cioè

@@ -3,7 +3,7 @@
 <html><head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Progetti di Fine Corso</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <section class="intestazione">
@@ -32,32 +32,32 @@ ulteriore raffinamento o arricchimento di queste specifiche aumenterà il valore
 del progetto.</p>
 <div><div>
  <ul>
-  <li>Le schede informative complete di ogni opera potranno anche estendersi su più pagine. In particolare,</li>
- </ul>
- <p>a) Ogni scheda dovrà prevedere l'accesso a un'opportuna galleria di immagini associate all'opera.</p>
- <p>b) Ogni scheda dovrà prevedere l'accesso a una serie di risorse di approfondimento, comprendenti materiale remoto (altri siti, indirizzi da contattare, numeri di telefono) e materiale locale (ad es. brochure scaricabili in formato elettronico).</p>
- <p>c) Ogni scheda dovrà prevedere un'area in cui i visitatori potranno lasciare i loro commenti sull'opera. I commenti saranno mostrati sulla pagina stessa, insieme a un modulo per aggiungere il proprio.</p>
- <ul>
-  <li><p>Il sito disporrà inoltre di schede informative su ogni artista associato a una o più opere catalogate nel sistema. Le schede in questo caso comprenderanno una biografia e la lista delle opere associate.</p></li>
-  <li><p>Ovviamente, ovunque possibile i nomi degli artisti e delle opere dovranno essere cliccabili, in modo da poter navigare tra le schede in maniera ipertestuale.</p></li>
-  <li><p>Il sito dovrà prevedere i seguenti sistemi di ricerca:</p></li>
- </ul>
- <p>a) Ricerca libera, tramite stringhe da individuare all'interno delle informazioni testuali associate alle opere.</p>
- <p>b) Ricerca per parole chiave, da individuare tra le etichette associate alle opere.</p>
- <p>c) Ricerca per autore (nome o parte di esso).</p>
- <p>d) Ricerca geografica, tramite l'indicazione del nome di una località, o parte di esso, da individuare tra le informazioni di localizzazione associate alle opere.</p>
- <ul>
-  <li><p>I risultati delle ricerche dovranno essere presentati tramite una lista contenente schede sintetiche su ciascuna opera individuata. Cliccando su un'opera, si accederà alla sua scheda completa.</p></li>
-  <li><p>Dovrà essere possibile raffinare la propria ricerca, cioè effettuare una nuova ricerca sui soli risultati della ricerca precedente.</p></li>
-  <li><p>Oltre alle funzioni di ricerca, sarà possibile "sfogliare" il catalogo delle opere con diverse modalità:</p></li>
- </ul>
- <p>a) Consultazione per nome. Il catalogo mostrerà i nomi, ordinati alfabeticamente, di tutte le opere. Cliccando su un nome, si potrà visualizzare la relativa scheda.</p>
- <p>b) Consultazione per autore. Il catalogo mostrerà i nomi, ordinati alfabeticamente, di tutti gli autori noti al sistema. Cliccando su un nome, si potrà visualizzare la relativa scheda.</p>
- <p>c) Consultazione per parole chiave. Il catalogo mostrerà le parole chiave presenti nel sistema, ordinate alfabeticamente, con indicazione del numero di opere associate a ciascuna di esse. Cliccando su una parola, si potrà visualizzare la rispettiva lista di opere.</p>
- <p>d) Consultazione geografica. In questa modalità, si potranno individuare le opere appartenenti a particolari zone geografiche, scendendo via via nel dettaglio. Ad esempio si potrà dapprima scegliere tra una lista di nazioni; una volta scelta una nazione e visualizzate le opere ad essa appartenenti, il catalogo mostrerà una lista di regioni appartenenti alla nazione prescelta, selezionando una delle quali la lista dei risultati verrà ulteriormente ristretta, ecc.</p>
- <ul>
-  <li><p>Il sito potrà proporre "itinerari virtuali" tra una serie di opere catalogate nel sistema. Ogni itinerario prevede un testo introduttivo e una sequenza di schede accompagnate da un commento testuale che motiva e guida la sequenza stessa.</p></li>
-  <li><p>Il sito dovrà inoltre essere dotato di un opportuno <em>backoffice</em> che permetta di inserire e modificare tutte le informazioni associate alle opere d'arte.</p></li>
+  <li>Le schede informative complete di ogni opera potranno anche estendersi su più pagine. In particolare, 
+   <ol>
+    <li>Ogni scheda dovrà prevedere l'accesso a un'opportuna galleria di immagini associate all'opera.</li>
+    <li>Ogni scheda dovrà prevedere l'accesso a una serie di risorse di approfondimento, comprendenti materiale remoto (altri siti, indirizzi da contattare, numeri di telefono) e materiale locale (ad es. brochure scaricabili in formato elettronico).</li>
+    <li>Ogni scheda dovrà prevedere un'area in cui i visitatori potranno lasciare i loro commenti sull'opera. I commenti saranno mostrati sulla pagina stessa, insieme a un modulo per aggiungere il proprio.</li>
+   </ol></li>
+  <li>Il sito disporrà inoltre di schede informative su ogni artista associato a una o più opere catalogate nel sistema. Le schede in questo caso comprenderanno una biografia e la lista delle opere associate.</li>
+  <li>Ovviamente, ovunque possibile i nomi degli artisti e delle opere dovranno essere cliccabili, in modo da poter navigare tra le schede in maniera ipertestuale.</li>
+  <li>Il sito dovrà prevedere i seguenti sistemi di ricerca: 
+   <ol>
+    <li>Ricerca libera, tramite stringhe da individuare all'interno delle informazioni testuali associate alle opere.</li>
+    <li>Ricerca per parole chiave, da individuare tra le etichette associate alle opere.</li>
+    <li>Ricerca per autore (nome o parte di esso).</li>
+    <li>Ricerca geografica, tramite l'indicazione del nome di una località, o parte di esso, da individuare tra le informazioni di localizzazione associate alle opere.</li>
+   </ol></li>
+  <li>I risultati delle ricerche dovranno essere presentati tramite una lista contenente schede sintetiche su ciascuna opera individuata. Cliccando su un'opera, si accederà alla sua scheda completa.</li>
+  <li>Dovrà essere possibile raffinare la propria ricerca, cioè effettuare una nuova ricerca sui soli risultati della ricerca precedente.</li>
+  <li>Oltre alle funzioni di ricerca, sarà possibile "sfogliare" il catalogo delle opere con diverse modalità: 
+   <ol>
+    <li>Consultazione per nome. Il catalogo mostrerà i nomi, ordinati alfabeticamente, di tutte le opere. Cliccando su un nome, si potrà visualizzare la relativa scheda.</li>
+    <li>Consultazione per autore. Il catalogo mostrerà i nomi, ordinati alfabeticamente, di tutti gli autori noti al sistema. Cliccando su un nome, si potrà visualizzare la relativa scheda.</li>
+    <li>Consultazione per parole chiave. Il catalogo mostrerà le parole chiave presenti nel sistema, ordinate alfabeticamente, con indicazione del numero di opere associate a ciascuna di esse. Cliccando su una parola, si potrà visualizzare la rispettiva lista di opere.</li>
+    <li>Consultazione geografica. In questa modalità, si potranno individuare le opere appartenenti a particolari zone geografiche, scendendo via via nel dettaglio. Ad esempio si potrà dapprima scegliere tra una lista di nazioni; una volta scelta una nazione e visualizzate le opere ad essa appartenenti, il catalogo mostrerà una lista di regioni appartenenti alla nazione prescelta, selezionando una delle quali la lista dei risultati verrà ulteriormente ristretta, ecc.</li>
+   </ol></li>
+  <li>Il sito potrà proporre "itinerari virtuali" tra una serie di opere catalogate nel sistema. Ogni itinerario prevede un testo introduttivo e una sequenza di schede accompagnate da un commento testuale che motiva e guida la sequenza stessa.</li>
+  <li>Il sito dovrà inoltre essere dotato di un opportuno <em>backoffice</em> che permetta di inserire e modificare tutte le informazioni associate alle opere d'arte.</li>
  </ul>
 </div></div>
 </section>

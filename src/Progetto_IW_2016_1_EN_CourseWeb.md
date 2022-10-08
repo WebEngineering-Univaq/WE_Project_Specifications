@@ -20,25 +20,19 @@ The site has to support **bilingual publication** (Italian and English) of all i
 
 Each course has to be necessarily associated to the following information. Any extra, arising from your personal experience, will be appreciated and perhaps may become an inspiration for the future.
 
-· Basic data: name, code, scientific sector (SSD, for example INF /
+- Basic data: name, code, scientific sector (SSD, for example INF /
 01), language, semester
-
-· Lecturers list
-
-· Course description: prerequisites, learning outcomes, assessment
+- Lecturers list
+- Course description: prerequisites, learning outcomes, assessment
 method, teaching method, syllabus/analytical program (in general, one point for
 each credit)
-
-· Textbooks (author, title, volume, year, publisher, web link if
+- Textbooks (author, title, volume, year, publisher, web link if
 available)
-
-· Relations with other courses: introductory courses, same-as
+- Relations with other courses: introductory courses, same-as
 courses, modules (for integrated courses)
-
-· External links: course homepage, external resources,
+- External links: course homepage, external resources,
 forum/eLearning
-
-· Notes (for any detail that does not belong to one of the items
+- Notes (for any detail that does not belong to one of the items
 above)
 
 *Optionally* , the *learning outcomes* mentioned in the list can be structured according to the so-called *Dublin descriptors* , required by the European standardization process. The descriptors the course objectives to be described thorugh of the results achieved in five areas: *knowledge* (what knowledge is acquired through the course?), *Application* (how and where the knowledge arising from the course can be applied?), *Evaluation* (if and how the knowledge gained can help in evaluating, judging, comparing ...?), *Communication* (if and how students can share the knowledge gained?), *Lifelong learning
@@ -46,9 +40,8 @@ skills* (the course provides tools to continue learning certain topics? ).
 
 Finally, the following information, while needed in a realistic course catalogue, in our project will be *optional*: the more you add, the more your project will have value.
 
-· The list of degrees/curriculums where the course is taught, with indication of its value in credits (ECTS), and the respective type (A, B, C, D, F).
-
-· List of teaching support items (with name, description and size) that can be downloaded from the website (such as PDF documents).
+- The list of degrees/curriculums where the course is taught, with indication of its value in credits (ECTS), and the respective type (A, B, C, D, F).
+- List of teaching support items (with name, description and size) that can be downloaded from the website (such as PDF documents).
 
 In order to create a "virtual guide" **the system must collect all this information year
 by year** . This means that you should **create a system where all the
@@ -73,8 +66,6 @@ information above is associated with an academic year**, and there can be severa
 - The site must have a log where all transactions carried out through the back-office are recorded (such as "User X has changed the course Y": you can decide which level of detail to include in these entries).
 
 - Finally, to realize the "virtual guide" described above, the site should behave as follows:
-1. the information presented in a course page are, by default, those related to the last academic year (which must be indicated on the page) where the course has been updated.
-
-2. the user should be able to choose an academic year and read the course information related to such academic year, if available (e.g., through controls on the course page, or using suitable filters on the course list).
-
-3. in the back office, the information entered or edited by the teacher are always related to the current academic year. When a teacher tries to change the information of a course, and no information is available for the current year, the information belonging to the closest past year are automatically copied to the current year. *Optionally*, administrators may be able change the course information for any academic year.  
+   1. the information presented in a course page are, by default, those related to the last academic year (which must be indicated on the page) where the course has been updated.
+   2. the user should be able to choose an academic year and read the course information related to such academic year, if available (e.g., through controls on the course page, or using suitable filters on the course list).
+   3. in the back office, the information entered or edited by the teacher are always related to the current academic year. When a teacher tries to change the information of a course, and no information is available for the current year, the information belonging to the closest past year are automatically copied to the current year. *Optionally*, administrators may be able change the course information for any academic year.  

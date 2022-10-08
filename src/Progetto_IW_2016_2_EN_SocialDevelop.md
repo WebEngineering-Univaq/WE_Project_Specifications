@@ -14,7 +14,7 @@ thisfile: specifica
 
 *SocialDevelop* is a web support tool for collaborative software development. While other sites like GitHub focus on the actual code writing and versioning, our system stays on a "meta" level, namely its aim is to publicize the software projects and identify suitable freelance developers to employ, automatically creating their "references".
 
-*Thanks to Konstantinos, Svetoslav, Petyo and Danail for suggesting me this idea* *J*  
+*Thanks to Konstantinos, Svetoslav, Petyo and Danail for suggesting me this idea* 
 
 The site is similar to a regular forum, but instead of discussion threads, SocialDevelop contains *projects*.
 
@@ -26,7 +26,6 @@ Finally, a task can be *open* or *closed*. A closed task does not accept further
 
 Messages (announcements, requests, and internal discussions) can be posted within projects, and they can be marked as public, i.e., visible to any user, or private, i.e., visible only to the project collaborators.
 
-<br />
 
 The site has an administrator who is only responsible of entering/editing the list of task types and the list of skills associated with each task type (*optionally* , you may associate the same skill to more than one task type). Skills may *optionally* have a hierarchical structure (for example, "Design Swing Interfaces" could be a "son" of "Java Programming") to organize them better. A skill, as already described, can be generic or very specific, and can be associated with tasks and with user profiles, as we will see.
 
@@ -39,9 +38,8 @@ The users of our site, that we shall call *developers,* must register themselves
 - All the users, including the *anonymous* ones, can browse the list of projects, see the related tasks (both as a compact list and in a detailed view) and read the public messages posted in the projects.
 
 - All the users, including the anonymous ones, can search on *SocialDevelop* in two ways:
-
-1. Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;
-2. Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.
+   1. Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;
+   2. Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.
 
 - Anonymous users can register on *SocialDevelop* to become registered users, i.e., developers. During the registration process, developers must provide their personal and contact details, their curriculum and their skills, as already described in this specification.
 

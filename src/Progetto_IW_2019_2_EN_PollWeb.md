@@ -15,26 +15,18 @@ thisfile: specifica
 The *PollWeb* site is a simple system for conducting online surveys. Each survey has a *manager* user, a title, an opening and a closing text, and consists of a series of questions. Each question, in turn, can be of one of the following types:
 
 1) *Short text*: a line of text;
-
 2) *Long text*: multiple lines of text;
-
 3) *Number*: numbers only;
-
 4) *Date*: only dates, optionally with associated time;
-
 5) *Single choice*: a series of options are presented and the user must choose exactly one of them;
-
 6) *Multiple choice*: a series of options are presented and the user can choose one or more of them.
 
 All the question types above have some common attributes: *code* (used to uniquely identify the question), *text* (the text of the question, optionally in HTML), *note* (an explanatory note that might appear after the question text to guide the compilation), *mandatory* (if set, indicates that the user must necessarily answer the question, or choose (at least) one of the answers in the case of multiple choice questions). Other attributes can be added to each question type to further specify it, for example
 
-• Minimum and maximum length of a text field;
-
-• *Minimum and maximum value* for numeric fields (and maybe also for dates);
-
-• *Regular expression* that must match a text field;
-
-• Minimum and/or maximum number of selectable options for multiple choices.
+- Minimum and maximum length of a text field;
+- *Minimum and maximum value* for numeric fields (and maybe also for dates);
+- *Regular expression* that must match a text field;
+- Minimum and/or maximum number of selectable options for multiple choices.
 
 These attributes are all optional, but the more you add, the more realistic your project will be.
 

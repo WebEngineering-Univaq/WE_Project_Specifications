@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Final Course Projects</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <body>
@@ -31,13 +31,11 @@
 <div><div>
  <ul>
   <li><p>All the users, including the <em>anonymous</em> ones, can browse the list of projects, see the related tasks (both as a compact list and in a detailed view) and read the public messages posted in the projects.</p></li>
-  <li><p>All the users, including the anonymous ones, can search on <em>SocialDevelop</em> in two ways:</p></li>
- </ul>
- <ol>
-  <li><p>Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;</p></li>
-  <li><p>Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.</p></li>
- </ol>
- <ul>
+  <li><p>All the users, including the anonymous ones, can search on <em>SocialDevelop</em> in two ways:</p>
+   <ol>
+    <li>Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;</li>
+    <li>Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.</li>
+   </ol></li>
   <li><p>Anonymous users can register on <em>SocialDevelop</em> to become registered users, i.e., developers. During the registration process, developers must provide their personal and contact details, their curriculum and their skills, as already described in this specification.</p></li>
   <li><p>The public profile of a developer shows, in addition to the above-described information, a list of <em>automatic references</em> generated from the projects he/she has worked or is working on. In particular, such references show the project name, the specific task(s) the developer was involved in, and an evaluation (when the task is complete) given by the project coordinator, whose name and email address are also included.</p></li>
   <li><p>Developers enrolled in a project can read all messages, both public and private, posted in the project, and post new messages.</p></li>

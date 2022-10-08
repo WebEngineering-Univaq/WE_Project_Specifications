@@ -3,7 +3,7 @@
 <html><head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Progetti di Fine Corso</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <section class="intestazione">
@@ -35,19 +35,23 @@ del progetto.</p>
  <ul>
   <li><p>Il sito dovrà prevedere tre tipologie di utenza: amministratori, utenti registrati e utenti anonimi. Andranno quindi previste procedure di registrazione e login.</p></li>
   <li><p>Il sito dovrà collezionare delle statistiche sulle destinazioni ricercate e visualizzate (ma non necessariamente acquistate sotto forma di offerta di viaggio) dai visitatori del sito. Queste statistiche saranno utilizzate, in particolare, per la creazione della homepage, nella quale figureranno in evidenza (in maniera da potervi accedere rapidamente) le ultime destinazioni consultate nonché quelle più consultate.</p></li>
-  <li><p>Ad ogni destinazione dovrà essere associata una scheda illustrativa contenente (almeno):</p></li>
-  <li><p>Una descrizione a turistica della destinazione.</p></li>
-  <li><p>Una lista di collegamenti a siti internet di approfondimento.</p></li>
-  <li><p>Una galleria di immagini (sulla stessa pagina o su una pagina collegata).</p></li>
-  <li><p>Una lista dei punti di particolare interesse presenti nell'ambito della destinazione (ad esempio monumenti, località da visitare, ecc.). Questa lista dovrà necessariamente contenere <em>almeno</em> tutte le destinazioni presenti nel sito che siano logicamente incluse in quella corrente. Ad esempio, se nel sito fossero presenti come destinazioni sia l'Abruzzo che L'Aquila, la pagina del primo dovrebbe citare quella della seconda come punto di interesse. In questo caso, sarà possibile cliccare sul luogo di interesse per saltare alla sua scheda specifica.</p></li>
+  <li><p>Ad ogni destinazione dovrà essere associata una scheda illustrativa contenente (almeno):</p>
+   <ul>
+    <li>Una descrizione a turistica della destinazione.</li>
+    <li>Una lista di collegamenti a siti internet di approfondimento.</li>
+    <li>Una galleria di immagini (sulla stessa pagina o su una pagina collegata).</li>
+    <li>Una lista dei punti di particolare interesse presenti nell'ambito della destinazione (ad esempio monumenti, località da visitare, ecc.). Questa lista dovrà necessariamente contenere <em>almeno</em> tutte le destinazioni presenti nel sito che siano logicamente incluse in quella corrente. Ad esempio, se nel sito fossero presenti come destinazioni sia l'Abruzzo che L'Aquila, la pagina del primo dovrebbe citare quella della seconda come punto di interesse. In questo caso, sarà possibile cliccare sul luogo di interesse per saltare alla sua scheda specifica.</li>
+   </ul></li>
   <li><p>A ciascuna destinazione potranno venire associate delle offerte di viaggio ad essa inerenti. Le offerte avranno un periodo di validità, un prezzo (per persona), e ovviamente una descrizione. Gli utenti registrati potranno comunicare il proprio interesse in un'offerta, venendo inseriti quindi in una lista di potenziali adesioni (visibile ai soli amministratori, ad esempio per contattare telefonicamente gli interessati).</p></li>
   <li><p>Gli utenti registrati avranno la possibilità di pubblicare commenti riguardanti le destinazioni, e dare un voto a ciascuna di esse. I commenti potranno essere mostrati nella scheda della corrispondente destinazione o in una pagina specifica ad essa collegata. Il voto medio attribuito dagli utenti (insieme al numero totale di voti pervenuti) sarà invece sempre presente sulla scheda.</p></li>
   <li><p>Una caratteristica importante di ciascuna destinazione dovrà essere la sua <em>classificazione</em> . Per classificare le destinazioni utilizzeremo una struttura generale a <em>tag</em> , dove il <em>tag</em> è una parola o breve frase dal significato evidente (ad esempio "città", "città d'arte", "località balneare", "nazione", "isola", "museo"). Gli amministratori e gli utenti registrati sul sito potranno definire dei <em>tag</em> assegnandoli alle destinazioni. Tuttavia, i <em>tag</em> attribuiti dagli amministratori saranno prioritari (ad esempio nel processo di ricerca descritto dopo) ed evidenziati in maniera diversa nella classificazione di ciascuna destinazione, in quanto più "ufficiali". Gli amministratori saranno inoltre gli unici a poter cancellare un <em>tag</em> da una destinazione.</p></li>
-  <li><p>Infine, il motore di ricerca costituirà una parte essenziale del sito. Dovrà essere possibile effettuare almeno le tipologie di ricerca che seguono (ogni altra forma di ricerca realisticamente utile inserita nel sito sarà valutata positivamente):</p></li>
-  <li><p>Ricerca di destinazioni in base ai <em>tag</em> ad esse associati.</p></li>
-  <li><p>Ricerca di destinazioni in base al loro nome (o parte di esso).</p></li>
-  <li><p>Ricerca di destinazioni in base alla disponibilità di offerte di viaggio valide in un determinato periodo e/o con una specifica soglia di prezzo.</p></li>
-  <li><p>Ricerca di offerte di viaggio (per qualsiasi destinazione) valide in un determinato periodo e/o con una specifica soglia di prezzo.</p></li>
+  <li><p>Infine, il motore di ricerca costituirà una parte essenziale del sito. Dovrà essere possibile effettuare almeno le tipologie di ricerca che seguono (ogni altra forma di ricerca realisticamente utile inserita nel sito sarà valutata positivamente):</p>
+   <ul>
+    <li>Ricerca di destinazioni in base ai <em>tag</em> ad esse associati.</li>
+    <li>Ricerca di destinazioni in base al loro nome (o parte di esso).</li>
+    <li>Ricerca di destinazioni in base alla disponibilità di offerte di viaggio valide in un determinato periodo e/o con una specifica soglia di prezzo.</li>
+    <li>Ricerca di offerte di viaggio (per qualsiasi destinazione) valide in un determinato periodo e/o con una specifica soglia di prezzo.</li>
+   </ul></li>
   <li><p>Il sito dovrà essere provvisto di un adeguato backoffice, accessibile dai soli amministratori, tramite il quale inserire e modificare i dati associati alle destinazioni e alle offerte.</p></li>
  </ul>
 </div></div>

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Final Course Projects</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <body>
@@ -22,17 +22,21 @@
  <p>The <em>CourseWeb</em> site provides an online catalog of university courses, suitably simplified but still meeting the main requirements of transparency and completeness required for this type of website.</p>
  <p>The site has to support <strong>bilingual publication</strong> (Italian and English) of all its content. Therefore you should have, for each view, at least two templates (one in Italian and one in English), and you should design the site so that it allows to enter information in both languages in the back-office and select which language to display in the front-office (<em>optionally</em>, if the content is not available in a language, the other language available will be always used).</p>
  <p>Each course has to be necessarily associated to the following information. Any extra, arising from your personal experience, will be appreciated and perhaps may become an inspiration for the future.</p>
- <p>· Basic data: name, code, scientific sector (SSD, for example INF / 01), language, semester</p>
- <p>· Lecturers list</p>
- <p>· Course description: prerequisites, learning outcomes, assessment method, teaching method, syllabus/analytical program (in general, one point for each credit)</p>
- <p>· Textbooks (author, title, volume, year, publisher, web link if available)</p>
- <p>· Relations with other courses: introductory courses, same-as courses, modules (for integrated courses)</p>
- <p>· External links: course homepage, external resources, forum/eLearning</p>
- <p>· Notes (for any detail that does not belong to one of the items above)</p>
+ <ul>
+  <li>Basic data: name, code, scientific sector (SSD, for example INF / 01), language, semester</li>
+  <li>Lecturers list</li>
+  <li>Course description: prerequisites, learning outcomes, assessment method, teaching method, syllabus/analytical program (in general, one point for each credit)</li>
+  <li>Textbooks (author, title, volume, year, publisher, web link if available)</li>
+  <li>Relations with other courses: introductory courses, same-as courses, modules (for integrated courses)</li>
+  <li>External links: course homepage, external resources, forum/eLearning</li>
+  <li>Notes (for any detail that does not belong to one of the items above)</li>
+ </ul>
  <p><em>Optionally</em> , the <em>learning outcomes</em> mentioned in the list can be structured according to the so-called <em>Dublin descriptors</em> , required by the European standardization process. The descriptors the course objectives to be described thorugh of the results achieved in five areas: <em>knowledge</em> (what knowledge is acquired through the course?), <em>Application</em> (how and where the knowledge arising from the course can be applied?), <em>Evaluation</em> (if and how the knowledge gained can help in evaluating, judging, comparing ...?), <em>Communication</em> (if and how students can share the knowledge gained?), <em>Lifelong learning skills</em> (the course provides tools to continue learning certain topics? ).</p>
  <p>Finally, the following information, while needed in a realistic course catalogue, in our project will be <em>optional</em>: the more you add, the more your project will have value.</p>
- <p>· The list of degrees/curriculums where the course is taught, with indication of its value in credits (ECTS), and the respective type (A, B, C, D, F).</p>
- <p>· List of teaching support items (with name, description and size) that can be downloaded from the website (such as PDF documents).</p>
+ <ul>
+  <li>The list of degrees/curriculums where the course is taught, with indication of its value in credits (ECTS), and the respective type (A, B, C, D, F).</li>
+  <li>List of teaching support items (with name, description and size) that can be downloaded from the website (such as PDF documents).</li>
+ </ul>
  <p>In order to create a "virtual guide" <strong>the system must collect all this information year by year</strong> . This means that you should <strong>create a system where all the information above is associated with an academic year</strong>, and there can be several copies for different academic years.</p>
 </div></div>
 <p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
@@ -45,13 +49,13 @@
   <li><p>Teachers can enter and edit all information belonging to their assigned courses, while administrators can modify all the courses.</p></li>
   <li><p>The back-office for teachers should also be very intuitive. It may be useful to provide contextual help to clarify the meaning of the various fields, and possibly split the course information into logical segments to be compiled in a wizard-style process. Where possible (e.g., in the selection of related courses, of languages, semesters, SSD, types of credits, etc.) the input should be assisted or guided.</p></li>
   <li><p>The site must have a log where all transactions carried out through the back-office are recorded (such as "User X has changed the course Y": you can decide which level of detail to include in these entries).</p></li>
-  <li><p>Finally, to realize the "virtual guide" described above, the site should behave as follows:</p></li>
+  <li><p>Finally, to realize the "virtual guide" described above, the site should behave as follows:</p>
+   <ol>
+    <li>the information presented in a course page are, by default, those related to the last academic year (which must be indicated on the page) where the course has been updated.</li>
+    <li>the user should be able to choose an academic year and read the course information related to such academic year, if available (e.g., through controls on the course page, or using suitable filters on the course list).</li>
+    <li>in the back office, the information entered or edited by the teacher are always related to the current academic year. When a teacher tries to change the information of a course, and no information is available for the current year, the information belonging to the closest past year are automatically copied to the current year. <em>Optionally</em>, administrators may be able change the course information for any academic year.</li>
+   </ol></li>
  </ul>
- <ol>
-  <li><p>the information presented in a course page are, by default, those related to the last academic year (which must be indicated on the page) where the course has been updated.</p></li>
-  <li><p>the user should be able to choose an academic year and read the course information related to such academic year, if available (e.g., through controls on the course page, or using suitable filters on the course list).</p></li>
-  <li><p>in the back office, the information entered or edited by the teacher are always related to the current academic year. When a teacher tries to change the information of a course, and no information is available for the current year, the information belonging to the closest past year are automatically copied to the current year. <em>Optionally</em>, administrators may be able change the course information for any academic year.</p></li>
- </ol>
 </div></div>
 </section>
 <section class="break intestazione">

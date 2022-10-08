@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Final Course Projects</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <body>
@@ -23,22 +23,20 @@
 <p>The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.</p>
 <div><div>
  <ul>
-  <li>The "students' guide" section of the site must present, in a simple and captivating way, the points that follow. It may also be useful to create different sets of information for students coming from different kinds of secondary school.</li>
- </ul>
- <ol>
-  <li><p>What is (and what is not!) the CS.</p></li>
-  <li><p>What <em>"study computer science"</em> means.</p></li>
-  <li><p>The job opportunities for a graduated CS student.</p></li>
-  <li><p>The university (where it is, which services it offers, etc.).</p></li>
-  <li><p>The CS degree (organization, degree types, etc. )</p></li>
- </ol>
- <ul>
-  <li><p>The site must contain information on the main CS degree courses (<em>what will I have to study?</em> ), especially those that are mandatory and/or placed in the first year, and on some advanced/interesting courses (<em>what will I be able to learn?</em> ). The information above could include a description of the course objectives, prerequisites and syllabus, sample course material, etc. This information should be updatable through a simple <em>backoffice</em> or, when possible, automatically captured from the university website.</p></li>
-  <li><p>A site section must list and explain all the prerequisites needed to begin studying CS, e.g. basic mathematical skills, etc. In order to allow students to self-evaluate, these pages should contain a short online test: at the end of such test, based on the user's answers, the site could suggest some arguments to study before starting with CS.</p></li>
-  <li><p>A site section must explain how to enrol to the CS degree: modules to compile, important dates, etc.</p></li>
-  <li><p>For secondary schools wanting to present CS to their students, the site must keep a list of the programmed guided visits to the university and offer a form to request a visit of a CS representative directly to the school.</p></li>
-  <li><p>The site must also offer some logistic information like how to reach the university, timetables of buses and trains, how to reach a specific building/classroom, etc.</p></li>
-  <li><p>Finally, the site should contain an interactive section, where students may register and publish ads in specific categories like room offers, transport offers, etc. and a (simple) forum to exchange opinions and indications about CS and the university. The site must offer a suitable public search engine to look up for specific ads and messages.</p></li>
+  <li>The "students' guide" section of the site must present, in a simple and captivating way, the points that follow. It may also be useful to create different sets of information for students coming from different kinds of secondary school. 
+   <ol>
+    <li>What is (and what is not!) the CS.</li>
+    <li>What <em>"study computer science"</em> means.</li>
+    <li>The job opportunities for a graduated CS student.</li>
+    <li>The university (where it is, which services it offers, etc.).</li>
+    <li>The CS degree (organization, degree types, etc. )</li>
+   </ol></li>
+  <li>The site must contain information on the main CS degree courses (<em>what will I have to study?</em> ), especially those that are mandatory and/or placed in the first year, and on some advanced/interesting courses (<em>what will I be able to learn?</em> ). The information above could include a description of the course objectives, prerequisites and syllabus, sample course material, etc. This information should be updatable through a simple <em>backoffice</em> or, when possible, automatically captured from the university website.</li>
+  <li>A site section must list and explain all the prerequisites needed to begin studying CS, e.g. basic mathematical skills, etc. In order to allow students to self-evaluate, these pages should contain a short online test: at the end of such test, based on the user's answers, the site could suggest some arguments to study before starting with CS.</li>
+  <li>A site section must explain how to enrol to the CS degree: modules to compile, important dates, etc.</li>
+  <li>For secondary schools wanting to present CS to their students, the site must keep a list of the programmed guided visits to the university and offer a form to request a visit of a CS representative directly to the school.</li>
+  <li>The site must also offer some logistic information like how to reach the university, timetables of buses and trains, how to reach a specific building/classroom, etc.</li>
+  <li>Finally, the site should contain an interactive section, where students may register and publish ads in specific categories like room offers, transport offers, etc. and a (simple) forum to exchange opinions and indications about CS and the university. The site must offer a suitable public search engine to look up for specific ads and messages.</li>
  </ul>
 </div></div>
 </section>

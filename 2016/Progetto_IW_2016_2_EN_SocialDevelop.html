@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Final Course Projects</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <body>
@@ -19,13 +19,12 @@
 <h2>Site Specifications</h2>
 <div><div>
  <p><em>SocialDevelop</em> is a web support tool for collaborative software development. While other sites like GitHub focus on the actual code writing and versioning, our system stays on a "meta" level, namely its aim is to publicize the software projects and identify suitable freelance developers to employ, automatically creating their "references".</p>
- <p><em>Thanks to Konstantinos, Svetoslav, Petyo and Danail for suggesting me this idea</em> <em>J</em></p>
+ <p><em>Thanks to Konstantinos, Svetoslav, Petyo and Danail for suggesting me this idea</em></p>
  <p>The site is similar to a regular forum, but instead of discussion threads, SocialDevelop contains <em>projects</em>.</p>
  <p>Each project has a <em>coordinator</em> and is associated with a set of <em>tasks</em> , i.e., activities to accomplish. Each task is accompanied by a textual <em>description</em> , the required <em>number of collaborators</em> (i.e., people to employ on the task), and the <em>time frame</em> for its completion.</p>
  <p>Moreover, each task also has a <em>type</em> (very general, and chosen from a predefined list, such as "development", "graphics", "documentation", etc.) and a list of <em>skills</em> it requires, each one associated with a <em>level of expertise</em> (from 1 to 10, for example, "C++ programming" level 8, or "Responsive design" level 5, etc.). These skills are also chosen from a predefined list, specific to the task type.</p>
  <p>Finally, a task can be <em>open</em> or <em>closed</em>. A closed task does not accept further collaborators, unless they are added directly by the project coordinator. On the other hand, developers, as described later, can send applications requests for open tasks. A task is considered closed if it already has the required number of collaborators or if the coordinator has explicitly closed it. Otherwise, it is open.</p>
  <p>Messages (announcements, requests, and internal discussions) can be posted within projects, and they can be marked as public, i.e., visible to any user, or private, i.e., visible only to the project collaborators.</p>
- <br>
  <p>The site has an administrator who is only responsible of entering/editing the list of task types and the list of skills associated with each task type (<em>optionally</em> , you may associate the same skill to more than one task type). Skills may <em>optionally</em> have a hierarchical structure (for example, "Design Swing Interfaces" could be a "son" of "Java Programming") to organize them better. A skill, as already described, can be generic or very specific, and can be associated with tasks and with user profiles, as we will see.</p>
  <p>The users of our site, that we shall call <em>developers,</em> must register themselves by providing their personal and contact information and their curriculum (as plain text or uploaded as a PDF file). They should also indicate their skills, chosen among the global list of skills available in the system, specifying for each of them the achieved level of expertise (through the same scale used for the skills associated with tasks, as specified above). For example, a developer could declare a level-7 skill in "Java Programming".</p>
 </div></div>
@@ -33,13 +32,11 @@
 <div><div>
  <ul>
   <li><p>All the users, including the <em>anonymous</em> ones, can browse the list of projects, see the related tasks (both as a compact list and in a detailed view) and read the public messages posted in the projects.</p></li>
-  <li><p>All the users, including the anonymous ones, can search on <em>SocialDevelop</em> in two ways:</p></li>
- </ul>
- <ol>
-  <li>Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;</li>
-  <li>Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.</li>
- </ol>
- <ul>
+  <li><p>All the users, including the anonymous ones, can search on <em>SocialDevelop</em> in two ways:</p>
+   <ol>
+    <li>Search for developers: the user indicates a set of skills (taken from the global list) and optionally a minimum level of expertise for each of them. The system will then return a list of developer profiles having all of those skills, with a level of expertise greater than or equal to the given threshold, if specified;</li>
+    <li>Search for projects: the user enters some keywords, and the system returns a list of projects having these words in their name or description.</li>
+   </ol></li>
   <li><p>Anonymous users can register on <em>SocialDevelop</em> to become registered users, i.e., developers. During the registration process, developers must provide their personal and contact details, their curriculum and their skills, as already described in this specification.</p></li>
   <li><p>The public profile of a developer shows, in addition to the above-described information, a list of <em>automatic references</em> generated from the projects he/she has worked or is working on. In particular, such references show the project name, the specific task(s) the developer was involved in, and an evaluation (when the task is complete) given by the project coordinator, whose name and email address are also included.</p></li>
   <li><p>Developers enrolled in a project can read all messages, both public and private, posted in the project, and post new messages.</p></li>

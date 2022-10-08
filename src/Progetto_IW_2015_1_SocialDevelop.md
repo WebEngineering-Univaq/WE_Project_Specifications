@@ -22,7 +22,7 @@ freelance più adatti per entrare in ciascun progetto, creando anche un sistema
 di "referenze".
 
 *Grazie a Konstantinos, Svetoslav, Petyo e Danail per
-avermi suggerito questa idea* *J*  
+avermi suggerito questa idea*
 
 La struttura del sito sarà simile a quella di un forum, ma
 invece dei *thread* (discussioni) su *SocialDevelop* verranno creati
@@ -69,7 +69,6 @@ ai *task* , come specificato sopra). Ad esempio, uno sviluppatore potrebbe
 dichiarare un livello 7 nello *skill* "Programmazione Java".
 
 -------
-
 {#operazioni}
 
 - Tutti gli utenti, anche*anonimi,* potranno navigare nella
@@ -79,9 +78,9 @@ dichiarare un livello 7 nello *skill* "Programmazione Java".
 
 - Tutti gli utenti, anche anonimi, avranno la possibilità di
   effettuare ricerche su *SocialDevelop* secondo due modalità:
-1. ricerca di sviluppatori: si potranno indicare una serie di *skill* (sempre prelevate dalla lista globale del sistema) e *opzionalmente* un livello minimo di competenza per ciascuna di esse. Il sistema restituirà quindi la lista dei profili degli sviluppatori aventi tutte quelle *skill*, con un livello di competenza maggiore o uguale a quello richiesto, se specificato;
-
-2. ricerca di progetti: si potranno inserire delle parole chiave e il sistema restituirà la lista dei progetti presenti su *SocialDevelop* aventi quelle parole nel nome o nella descrizione.
+   1. ricerca di sviluppatori: si potranno indicare una serie di *skill* (sempre prelevate dalla lista globale del sistema) e *opzionalmente* un livello minimo di competenza per ciascuna di esse. Il sistema restituirà quindi la lista dei profili degli sviluppatori aventi tutte quelle *skill*, con un livello di competenza maggiore o uguale a quello richiesto, se specificato;
+   2. ricerca di progetti: si potranno inserire delle parole chiave e il sistema restituirà la lista dei progetti presenti su *SocialDevelop* aventi quelle parole nel nome o nella descrizione.
+   
 - Gli utenti anonimi potranno registrarsi divenendo così utenti
   registrati o *sviluppatori* . Nel processo di registrazione lo sviluppatore
   dovrà fornire i propri dati anagrafici, di contatto nonché il proprio

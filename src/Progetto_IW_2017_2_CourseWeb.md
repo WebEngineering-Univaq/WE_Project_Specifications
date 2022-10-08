@@ -38,30 +38,24 @@ Ciascun corso dovrà essere necessariamente associato alle
 informazioni che seguono. Qualunque altro extra, derivante dalla vostra
 esperienza diretta, sarà apprezzato e magari di ispirazione per il futuro.
 
-· Dati di base: nome, codice, settore scientifico-disciplinare
+- Dati di base: nome, codice, settore scientifico-disciplinare
 (SSD, ad esempio INF/01), lingua, semestre
-
-· Lista docenti titolari
-
-· Descrizione del corso: prerequisiti, obiettivi di apprendimento,
+- Lista docenti titolari
+- Descrizione del corso: prerequisiti, obiettivi di apprendimento,
 modalità d'esame, modalità di insegnamento, sillabo/programma analitico
 (suddiviso per punti, in generale un punto per ciascun credito)
-
-· Libri di testo (autore, titolo, volume, anno, editore, link web
+- Libri di testo (autore, titolo, volume, anno, editore, link web
 se disponibile)
-
-· Relazioni con altri insegnamenti: corsi propedeutici, corsi
+- Relazioni con altri insegnamenti: corsi propedeutici, corsi
 mutuati, moduli (nel caso di corsi integrati)
-
-· Collegamenti esterni (link): homepage del corso, risorse esterne,
+- Collegamenti esterni (link): homepage del corso, risorse esterne,
 forum/eLearning
-
-· Note (ogni dettaglio per il quale non è prevista una voce
+- Note (ogni dettaglio per il quale non è prevista una voce
 specifica)
 
 *Opzionalmente* , gli *obiettivi di
 apprendimento* citati nella lista possono essere strutturati secondo i
-cosiddetti *descrittori di Dublino* , richiesti dai processi di
+cosiddetti *descrittori di Dublino*, richiesti dai processi di
 standardizzazione europei. I descrittori richiedono che gli obiettivi del corso
 siano descritti sulla base dei risultati raggiunti in cinque aree: *Knowledge*
 (quali conoscenze sono acquisite con il corso?), *Application* (come e
@@ -76,11 +70,10 @@ Infine, anche le informazioni che seguono,
 pur necessarie in un sistema realistico, nel nostro progetto saranno *opzionali*:
 più ne aggiungete, più il vostro progetto avrà valore.
 
-· Informazioni sull'erogazione: lista dei corsi di
+- Informazioni sull'erogazione: lista dei corsi di
 laurea/curriculum per il quale il corso è fruibile, con indicazione del suo
 valore in crediti (CFU) e della rispettiva tipologia (A, B, C, D, F)
-
-· Materiale: una lista di elementi (con nome, descrizione e
+- Materiale: una lista di elementi (con nome, descrizione e
 dimensioni) scaricabili dal sito (come i PDF)
 
 Per poter creare una "guida virtuale" sarà necessario che **il
@@ -90,7 +83,6 @@ associati a un anno accademico**, e che ne possano quindi esistere diverse
 copie, per differenti anni accademici.
 
 -------
-
 {#operazioni}
 
 - Il sistema dovrà prevedere tre tipologie di utenza: *anonimo* ,
@@ -133,6 +125,6 @@ copie, per differenti anni accademici.
 
 - Infine, per realizzare la "guida virtuale" introdotta più in
   alto, quello che ci si aspetta dal sito è che:
-1. le informazioni presentate nella scheda di ciascun corso siano, di default, quelle riferite all'ultimo anno accademico (che deve essere evidenziato nella scheda) per il quale il corso è stato aggiornato.
-2. all'utente sia offerta la possibilità di visionare la scheda di un corso relativa a uno degli altri anni accademici per i quali le informazioni sono disponibili (ad esempio tramite dei controlli sulla scheda del corso, oppure con opportuni filtri sull'elenco corsi generale)
-3. nel back office, le informazioni inserite o modificate dai docenti siano sempre quelle relative all'anno accademico corrente. Quando un docente cerca di modificare le informazioni di un corso e queste non sono già presenti per l'anno accademico corrente, verranno automaticamente copiate, come base, quelle dell'anno più prossimo, se presenti. *Opzionalmente*, gli amministratori potranno modificare anche le informazioni relative ad altri anni accademici.
+   1. le informazioni presentate nella scheda di ciascun corso siano, di default, quelle riferite all'ultimo anno accademico (che deve essere evidenziato nella scheda) per il quale il corso è stato aggiornato.
+   2. all'utente sia offerta la possibilità di visionare la scheda di un corso relativa a uno degli altri anni accademici per i quali le informazioni sono disponibili (ad esempio tramite dei controlli sulla scheda del corso, oppure con opportuni filtri sull'elenco corsi generale)
+   3. nel back office, le informazioni inserite o modificate dai docenti siano sempre quelle relative all'anno accademico corrente. Quando un docente cerca di modificare le informazioni di un corso e queste non sono già presenti per l'anno accademico corrente, verranno automaticamente copiate, come base, quelle dell'anno più prossimo, se presenti. *Opzionalmente*, gli amministratori potranno modificare anche le informazioni relative ad altri anni accademici.

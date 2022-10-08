@@ -10,7 +10,6 @@ thisfile: specifica
 ---
 
 -------
-
 {#specifiche}
 
 Il sito Test*OnLine* rappresenta un semplice sistema
@@ -47,17 +46,16 @@ docente e lo studente.
 - Per creare i test, i coordinatori assegneranno loro un nome, il
   periodo di erogazione (cioè l'intervallo di giorni all'interno del quale potrà
   essere sostenuto) e le composizione, secondo una delle seguenti modalità:
-1) indicando una serie di docenti e, per ciascuno di essi, uno dei settori
+   1) indicando una serie di docenti e, per ciascuno di essi, uno dei settori
    didattici per i quali hanno predisposto dei quesiti, un livello di difficoltà e
    un numero di quesiti (ad esempio: 5 quesiti di livello 3 sulle Reti di
    Calcolatori redatti dal prof. X, 12 quesiti di livello 5 sulle Tecnologie del
    Web redatti dal prof. Y);
-
-2) indicando solamente una serie di settori didattici con associato un
+   2) indicando solamente una serie di settori didattici con associato un
    livello di difficoltà e un numero di quesiti (ad esempio 5 quesiti di livello 3
    sulle Reti di Calcolatori, 12 quesiti di livello 5 sulle Tecnologie del Web);
 
-In base alle scelte del
+   In base alle scelte del
 coordinatore, il sistema dovrà verificare che un test della composizione data
 possa essere effettivamente generato (cioè se il numero e la tipologia di
 quesiti richiesti è effettivamente disponibile.).
@@ -85,19 +83,18 @@ quesiti richiesti è effettivamente disponibile.).
 
 - Nel momento in cui uno studente richiederà di sostenere un test,
   il sistema ne genererà *un'istanza casuale* nel modo che segue:
-1) nel caso in cui il test sia stato definito come al punto (1), il sistema
+   1) nel caso in cui il test sia stato definito come al punto (1), il sistema
    selezionerà, per ciascuna tupla (*docente* , *settore* , *livello* ,
    *numero* ) presente nella definizione del test stesso, un *numero* di
    quesiti (scelti a caso) tra quelli inseriti dal *docente* per quello
    specifico *settore* con il *livello* di difficoltà specificato;
-
-2) nel caso in cui invece il test sia stato definito come al punto (2), il
+   2) nel caso in cui invece il test sia stato definito come al punto (2), il
    sistema selezionerà, per ciascuna tupla (*settore* , *livello* , *numero* )
    presente nella definizione del test stesso, un *numero* di quesiti (scelti
    a caso) tra quelli inseriti da tutti i docenti per quello specifico *settore*
    con il *livello* di difficoltà specificato.
 
-In entrambi i casi, infine, il
+   In entrambi i casi, infine, il
 sistema selezionerà *casualmente* , tra le risposte possibili di ciascun
 quesito così prescelto, *tre risposte*, tra cui figuri sempre anche quella
 corretta.

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Final Course Projects</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <body>
@@ -20,18 +20,20 @@
 <div><div>
  <p>The <em>PollWeb</em> site is a simple system for conducting online surveys. Each survey has a <em>manager</em> user, a title, an opening and a closing text, and consists of a series of questions. Each question, in turn, can be of one of the following types:</p>
  <ol>
-  <li><p><em>Short text</em>: a line of text;</p></li>
-  <li><p><em>Long text</em>: multiple lines of text;</p></li>
-  <li><p><em>Number</em>: numbers only;</p></li>
-  <li><p><em>Date</em>: only dates, optionally with associated time;</p></li>
-  <li><p><em>Single choice</em>: a series of options are presented and the user must choose exactly one of them;</p></li>
-  <li><p><em>Multiple choice</em>: a series of options are presented and the user can choose one or more of them.</p></li>
+  <li><em>Short text</em>: a line of text;</li>
+  <li><em>Long text</em>: multiple lines of text;</li>
+  <li><em>Number</em>: numbers only;</li>
+  <li><em>Date</em>: only dates, optionally with associated time;</li>
+  <li><em>Single choice</em>: a series of options are presented and the user must choose exactly one of them;</li>
+  <li><em>Multiple choice</em>: a series of options are presented and the user can choose one or more of them.</li>
  </ol>
  <p>All the question types above have some common attributes: <em>code</em> (used to uniquely identify the question), <em>text</em> (the text of the question, optionally in HTML), <em>note</em> (an explanatory note that might appear after the question text to guide the compilation), <em>mandatory</em> (if set, indicates that the user must necessarily answer the question, or choose (at least) one of the answers in the case of multiple choice questions). Other attributes can be added to each question type to further specify it, for example</p>
- <p>• Minimum and maximum length of a text field;</p>
- <p>• <em>Minimum and maximum value</em> for numeric fields (and maybe also for dates);</p>
- <p>• <em>Regular expression</em> that must match a text field;</p>
- <p>• Minimum and/or maximum number of selectable options for multiple choices.</p>
+ <ul>
+  <li>Minimum and maximum length of a text field;</li>
+  <li><em>Minimum and maximum value</em> for numeric fields (and maybe also for dates);</li>
+  <li><em>Regular expression</em> that must match a text field;</li>
+  <li>Minimum and/or maximum number of selectable options for multiple choices.</li>
+ </ul>
  <p>These attributes are all optional, but the more you add, the more realistic your project will be.</p>
  <p><em>Tip</em> : a very important part of this project will be, clearly, the definition and implementation of a data structure that can model the surveys by aggregating questions that, in turn, can be defined, each with its own characteristics, in the most efficient way, and associated with responses in an equally effective manner.</p>
 </div></div>

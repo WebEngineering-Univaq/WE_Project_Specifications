@@ -1,11 +1,8 @@
-<html>
-<head>
+<html><head>
 <meta charset="UTF-8"/>
 <title>${nomecorso}: Final Course Projects</title>
 <style>${css?no_esc}</style>
 </head>
-
-<body>
 
 <body>
 <section class="intestazione">
@@ -15,7 +12,7 @@
 </section>
 
 
-
+<section class="specifica">
 <h1>Project "${titolo}" <span class="versione">Version ${versione!"1.0"}</span></h1>
 
 ## Preamble

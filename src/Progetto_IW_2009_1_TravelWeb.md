@@ -10,7 +10,6 @@ thisfile: specifica
 ---
 
 -------
-
 {#specifiche}
 
 Il sito *TravelWeb* rappresenta una semplice agenzia di
@@ -29,7 +28,6 @@ generali (ad esempio Italia \> Abruzzo \> L'Aquila \> Basilica di
 Collemaggio).
 
 -------
-
 {#operazioni}
 
 - Il sito dovrà prevedere tre tipologie di utenza: amministratori,
@@ -45,15 +43,11 @@ Collemaggio).
 
 - Ad ogni destinazione dovrà essere associata una scheda illustrativa
   contenente (almeno):
-
-- Una descrizione a turistica della destinazione.
-
-- Una lista di collegamenti a siti internet di approfondimento.
-
-- Una galleria di immagini (sulla stessa pagina o su una pagina
+   - Una descrizione a turistica della destinazione.
+   - Una lista di collegamenti a siti internet di approfondimento.
+   - Una galleria di immagini (sulla stessa pagina o su una pagina
   collegata).
-
-- Una lista dei punti di particolare interesse presenti nell'ambito
+   - Una lista dei punti di particolare interesse presenti nell'ambito
   della destinazione (ad esempio monumenti, località da visitare, ecc.). Questa
   lista dovrà necessariamente contenere *almeno* tutte le destinazioni
   presenti nel sito che siano logicamente incluse in quella corrente. Ad esempio,
@@ -92,15 +86,11 @@ Collemaggio).
   sito. Dovrà essere possibile effettuare almeno le tipologie di ricerca che
   seguono (ogni altra forma di ricerca realisticamente utile inserita nel sito
   sarà valutata positivamente):
-
-- Ricerca di destinazioni in base ai *tag* ad esse associati.
-
-- Ricerca di destinazioni in base al loro nome (o parte di esso).
-
-- Ricerca di destinazioni in base alla disponibilità di offerte di
+   - Ricerca di destinazioni in base ai *tag* ad esse associati.
+   - Ricerca di destinazioni in base al loro nome (o parte di esso).
+   - Ricerca di destinazioni in base alla disponibilità di offerte di
   viaggio valide in un determinato periodo e/o con una specifica soglia di prezzo.
-
-- Ricerca di offerte di viaggio (per qualsiasi destinazione) valide
+   - Ricerca di offerte di viaggio (per qualsiasi destinazione) valide
   in un determinato periodo e/o con una specifica soglia di prezzo.
 
 - Il sito dovrà essere provvisto di un adeguato backoffice,

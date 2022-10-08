@@ -52,12 +52,11 @@ in cui vengono costruiti gli alberi genealogici.
   di volta in volta solo parenti diretti, cioè *padre* , *madre,* *figli* e*fratelli*, di persone già nel suo albero genealogico. Quindi, per
   inserire il suo nonno materno, dovrà prima inserire sua madre e poi il padre di
   quest'ultima.
-1. Dopo aver effettuato una ricerca, individuando dei possibili parenti, l'utente avrà la possibilità di aggiungerli al proprio albero genealogico.
-
-2. Se un parente non è già presente nel sistema, ma è noto all'utente, questo potrà creare il suo profilo di base (nome, cognome, email, data e luogo di nascita) e aggiungerlo contestualmente al proprio albero genealogico.
-
-3. Infine, per gestire parenti non raggiungibili (o defunti) l'utente potrà creare un profilo base come specificato sopra ma *senza
+   1. Dopo aver effettuato una ricerca, individuando dei possibili parenti, l'utente avrà la possibilità di aggiungerli al proprio albero genealogico.
+   2. Se un parente non è già presente nel sistema, ma è noto all'utente, questo potrà creare il suo profilo di base (nome, cognome, email, data e luogo di nascita) e aggiungerlo contestualmente al proprio albero genealogico.
+   3. Infine, per gestire parenti non raggiungibili (o defunti) l'utente potrà creare un profilo base come specificato sopra ma *senza
    un indirizzo email* e aggiungerlo al proprio albero genealogico, ma in questo caso la relazione parentela sarà sempre mostrata dal sistema con la segnalazione "*non verificato*" a fianco.
+   
 - In tutti i casi, l'utente dovrà poter specificare il componente
   del suo albero genealogico con cui la persona trovata è legata e il relativo
   grado di parentela (*padre* , *madre* , *figlio, fratello*).

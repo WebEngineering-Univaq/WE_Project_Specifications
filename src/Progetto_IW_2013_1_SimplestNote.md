@@ -83,22 +83,13 @@ modifica.
 
 - *Opzionalmente* , potrete realizzare l'*endpoint* per un
   eventuale client mobile del nostro servizio: un semplice sistema di
-  esportazione JSON delle note.   
-
-Il sito dovrà rispondere a due URL speciali, che indicheremo rispettivamente
-con *http://server.it/notepad/getList?user=email\&pass=password* e con *http://server.it/notepad/getNote?user=email\&pass=password
-\&note=ID.*   
-
-Chiamando la prima, il server dovrà restituire una struttura JSON (attenzione
-al *content type* !) che rappresenta la lista di tutte le note dell'utente
+  esportazione JSON delle note.  Il sito dovrà rispondere a due URL speciali, che indicheremo rispettivamente
+con *http://server.it/notepad/getList?user=email\&pass=password* e con *http://server.it/notepad/getNote?user=email\&pass=password\&note=ID.*   Chiamando la prima, il server dovrà restituire una struttura JSON (attenzione al *content type* !) che rappresenta la lista di tutte le note dell'utente
 avente l'*email* specificata, autenticato tramite la *password*
 inserita anch'essa nella URL. Ovviamente, in caso di problemi con
 l'autenticazione, la risposta sarà vuota. La lista dovrà contenere, per ogni
 nota, il suo ID (chiaramente il vostro sistema dovrà dotare ogni nota di un
-identificatore per inserirlo nella base di dati) e il titolo.   
-
-Chiamando invece la seconda URL, verrà restituita una struttura JSON contenente
-data di creazione, data di modifica, numero di versione, titolo, contenuto e
+identificatore per inserirlo nella base di dati) e il titolo.   Chiamando invece la seconda URL, verrà restituita una struttura JSON contenente data di creazione, data di modifica, numero di versione, titolo, contenuto e
 tags della nota specificata dall'ID inserito nella URL stessa e appartenente
 all'utente autenticato con le credenziali specificate. *Nota bene:* in
 un'applicazione reale, trasmettere username e password ad ogni chiamata del

@@ -26,11 +26,9 @@ The site is accessible to registered users only. When registering, a new user mu
 - Registered users, on the other hand, can search for other users by specifying different parameters, including first and last name (finding people with your last name is a good starting point to search for a possible relationship!), date and place of birth. The user should be able to combine these parameters to perform refined searches. The search results contain, in this case, name, surname, date and place of birth of each user found.
 
 - To create a family tree, the user can proceed in three ways. *Note* : to simplify the system, we assume that the user can add only direct relatives, i.e., *father, mother, sons* and*brothers/sisters* of people already in his/her family tree. Thus, to add the maternal grandfather, the user must first add his/her mother and then her father.
-1. After performing a search and identifying some possible relatives, the user can add them to the family tree.
-
-2. If a relative is not registered in the system, the user can create his/her basic profile (name, email address, date and place of birth) and add him/her to the family tree.
-
-3. Finally, to handle relatives cannot be reached (or are dead), the user can also create a basic profile as specified above, *but
+   1. After performing a search and identifying some possible relatives, the user can add them to the family tree.
+   2. If a relative is not registered in the system, the user can create his/her basic profile (name, email address, date and place of birth) and add him/her to the family tree.
+   3. Finally, to handle relatives cannot be reached (or are dead), the user can also create a basic profile as specified above, *but
    without an email address* , and add it to the family tree. In this case, the added relationship will always be displayed by the system as "*unverified*".
 - In all cases, to actually add an relative to the family tree, the user must specify the tree position to attach the new relative to and the corresponding relationship (*father, mother, son, brother/sister*).
 

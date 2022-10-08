@@ -3,7 +3,7 @@
 <html><head>
 <meta charset="UTF-8"/>
 <title>Web Engineering: Progetti di Fine Corso</title>
-<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } li { padding-left:1rem; } ol { padding-left:2rem; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
+<style>body { font-family: Cambria; font-size: 12pt; text-align: justify; margin: 2rem 5rem; } h1 { font-size: 200%; font-weight: bold; margin-bottom: 1rem; } .versione{ display: block; font-size: 50%; margin-top: 0.5rem; font-weight: normal; } h2 { font-size: 140%; border-bottom: 1px solid black; margin-bottom: 1rem; margin-top: 2rem; font-weight: normal; } p, li { margin-bottom: 0.5rem; } ul,ol { margin-left: 0; padding-left: 1rem; } ul > li::marker { content: '\2014 '; } table { width: 100%; border: 2px solid black; border-spacing: 0px; border-collapse: collapse; } td, th { border: 1px solid black; } .intestazione { margin: 1rem -2rem; background-color: rgb(46,116,181); text-align:center; border-radius: 5px; font-size: 220%; font-weight: bold; color: white; padding: 5px; } .ncorso { grid-area: corso; } .aa { font-style: italic; font-size: 90% } .nprogetto { font-size: 50% } .linetocompile { border-bottom: 0.5px solid gray; width: 100%; line-height: 2rem; } .break { page-break-before: always; } @media print { @page { size: A4; margin: 1cm; } body {margin: 0 2rem} .intestazione { margin: 1rem -1rem; } }</style>
 </head>
 <body>
 <section class="intestazione">
@@ -28,17 +28,21 @@ di utenza associate alle applicazioni web pubbliche.</p>
  <p>Il sito <em>CourseWeb</em> rappresenta un catalogo di corsi universitari online, semplificato ma rispondente ai principali requisiti di trasparenza e completezza necessari per questo tipo di sito.</p>
  <p>Per prima cosa, il sito dovrà supportare la <strong>pubblicazione bilingue</strong> (italiano e inglese) di tutti i contenuti, requisito necessario per l'internazionalizzazione. Dovrete quindi avere, per ogni vista, almeno due template (uno in italiano e uno in inglese), progettare un sistema per inserire le informazioni in entrambe le lingue nel back-office e uno per selezionare quale lingua visualizzare nel front-office (<em>opzionalmente</em>, in assenza del contenuto in una lingua, verrà sempre utilizzata l'altra lingua a disposizione).</p>
  <p>Ciascun corso dovrà essere necessariamente associato alle informazioni che seguono. Qualunque altro extra, derivante dalla vostra esperienza diretta, sarà apprezzato e magari di ispirazione per il futuro.</p>
- <p>· Dati di base: nome, codice, settore scientifico-disciplinare (SSD, ad esempio INF/01), lingua, semestre</p>
- <p>· Lista docenti titolari</p>
- <p>· Descrizione del corso: prerequisiti, obiettivi di apprendimento, modalità d'esame, modalità di insegnamento, sillabo/programma analitico (suddiviso per punti, in generale un punto per ciascun credito)</p>
- <p>· Libri di testo (autore, titolo, volume, anno, editore, link web se disponibile)</p>
- <p>· Relazioni con altri insegnamenti: corsi propedeutici, corsi mutuati, moduli (nel caso di corsi integrati)</p>
- <p>· Collegamenti esterni (link): homepage del corso, risorse esterne, forum/eLearning</p>
- <p>· Note (ogni dettaglio per il quale non è prevista una voce specifica)</p>
- <p><em>Opzionalmente</em> , gli <em>obiettivi di apprendimento</em> citati nella lista possono essere strutturati secondo i cosiddetti <em>descrittori di Dublino</em> , richiesti dai processi di standardizzazione europei. I descrittori richiedono che gli obiettivi del corso siano descritti sulla base dei risultati raggiunti in cinque aree: <em>Knowledge</em> (quali conoscenze sono acquisite con il corso?), <em>Application</em> (come e dove sono applicabili le conoscenze derivanti dal corso?), <em>Evaluation</em> (se e in che modo le conoscenze acquisite possono aiutare nel valutare, giudicare, comparare...?), <em>Communication</em> (se e in che modo gli studenti possono trasmettere la conoscenza acquisita?), <em>Lifelong learning skills</em> (il corso fornisce strumenti per continuare ad apprendere determinati argomenti?).</p>
+ <ul>
+  <li>Dati di base: nome, codice, settore scientifico-disciplinare (SSD, ad esempio INF/01), lingua, semestre</li>
+  <li>Lista docenti titolari</li>
+  <li>Descrizione del corso: prerequisiti, obiettivi di apprendimento, modalità d'esame, modalità di insegnamento, sillabo/programma analitico (suddiviso per punti, in generale un punto per ciascun credito)</li>
+  <li>Libri di testo (autore, titolo, volume, anno, editore, link web se disponibile)</li>
+  <li>Relazioni con altri insegnamenti: corsi propedeutici, corsi mutuati, moduli (nel caso di corsi integrati)</li>
+  <li>Collegamenti esterni (link): homepage del corso, risorse esterne, forum/eLearning</li>
+  <li>Note (ogni dettaglio per il quale non è prevista una voce specifica)</li>
+ </ul>
+ <p><em>Opzionalmente</em> , gli <em>obiettivi di apprendimento</em> citati nella lista possono essere strutturati secondo i cosiddetti <em>descrittori di Dublino</em>, richiesti dai processi di standardizzazione europei. I descrittori richiedono che gli obiettivi del corso siano descritti sulla base dei risultati raggiunti in cinque aree: <em>Knowledge</em> (quali conoscenze sono acquisite con il corso?), <em>Application</em> (come e dove sono applicabili le conoscenze derivanti dal corso?), <em>Evaluation</em> (se e in che modo le conoscenze acquisite possono aiutare nel valutare, giudicare, comparare...?), <em>Communication</em> (se e in che modo gli studenti possono trasmettere la conoscenza acquisita?), <em>Lifelong learning skills</em> (il corso fornisce strumenti per continuare ad apprendere determinati argomenti?).</p>
  <p>Infine, anche le informazioni che seguono, pur necessarie in un sistema realistico, nel nostro progetto saranno <em>opzionali</em>: più ne aggiungete, più il vostro progetto avrà valore.</p>
- <p>· Informazioni sull'erogazione: lista dei corsi di laurea/curriculum per il quale il corso è fruibile, con indicazione del suo valore in crediti (CFU) e della rispettiva tipologia (A, B, C, D, F)</p>
- <p>· Materiale: una lista di elementi (con nome, descrizione e dimensioni) scaricabili dal sito (come i PDF)</p>
+ <ul>
+  <li>Informazioni sull'erogazione: lista dei corsi di laurea/curriculum per il quale il corso è fruibile, con indicazione del suo valore in crediti (CFU) e della rispettiva tipologia (A, B, C, D, F)</li>
+  <li>Materiale: una lista di elementi (con nome, descrizione e dimensioni) scaricabili dal sito (come i PDF)</li>
+ </ul>
  <p>Per poter creare una "guida virtuale" sarà necessario che <strong>il sistema raccolga tutte queste informazioni anno per anno</strong> . Ciò significa che dovrete <strong>predisporre un sistema col quale i dati appena esposti siano associati a un anno accademico</strong>, e che ne possano quindi esistere diverse copie, per differenti anni accademici.</p>
 </div></div>
 <p>Di seguito sono illustrati schematicamente i contenuti e le
@@ -54,13 +58,13 @@ del progetto.</p>
   <li><p>I docenti potranno inserire e modificare tutte le informazioni inerenti i soli corsi loro assegnati, mentre ovviamente gli amministratori potranno intervenire su tutti i corsi.</p></li>
   <li><p>Il back-office per i docenti dovrà essere ugualmente molto curato e intuitivo, considerato che anche l'utenza di questo lato del sistema sarà ampia e variegata. Sarà utile predisporre help contestuali che chiariscano il significato dei vari campi da valorizzare, ed eventualmente suddividere la compilazione della scheda di un corso in segmenti logici, stile <em>wizard</em>. Ove possibile (ad esempio nella selezione dei corsi in relazione, delle lingue, dei semestri, dei SSD, delle tipologie di credito, ecc.) si prevedano sempre campi con compilazione assistita o guidata.</p></li>
   <li><p>Il sito disporrà di un <em>log</em> in cui dovranno essere annotate tutte le operazioni svolte tramite il back-office (ad esempio "l'utente X ha modificato le informazioni del corso Y": decidete voi quale livello di dettaglio raggiungere in queste <em>entry</em>).</p></li>
-  <li><p>Infine, per realizzare la "guida virtuale" introdotta più in alto, quello che ci si aspetta dal sito è che:</p></li>
+  <li><p>Infine, per realizzare la "guida virtuale" introdotta più in alto, quello che ci si aspetta dal sito è che:</p>
+   <ol>
+    <li>le informazioni presentate nella scheda di ciascun corso siano, di default, quelle riferite all'ultimo anno accademico (che deve essere evidenziato nella scheda) per il quale il corso è stato aggiornato.</li>
+    <li>all'utente sia offerta la possibilità di visionare la scheda di un corso relativa a uno degli altri anni accademici per i quali le informazioni sono disponibili (ad esempio tramite dei controlli sulla scheda del corso, oppure con opportuni filtri sull'elenco corsi generale)</li>
+    <li>nel back office, le informazioni inserite o modificate dai docenti siano sempre quelle relative all'anno accademico corrente. Quando un docente cerca di modificare le informazioni di un corso e queste non sono già presenti per l'anno accademico corrente, verranno automaticamente copiate, come base, quelle dell'anno più prossimo, se presenti. <em>Opzionalmente</em>, gli amministratori potranno modificare anche le informazioni relative ad altri anni accademici.</li>
+   </ol></li>
  </ul>
- <ol>
-  <li>le informazioni presentate nella scheda di ciascun corso siano, di default, quelle riferite all'ultimo anno accademico (che deve essere evidenziato nella scheda) per il quale il corso è stato aggiornato.</li>
-  <li>all'utente sia offerta la possibilità di visionare la scheda di un corso relativa a uno degli altri anni accademici per i quali le informazioni sono disponibili (ad esempio tramite dei controlli sulla scheda del corso, oppure con opportuni filtri sull'elenco corsi generale)</li>
-  <li>nel back office, le informazioni inserite o modificate dai docenti siano sempre quelle relative all'anno accademico corrente. Quando un docente cerca di modificare le informazioni di un corso e queste non sono già presenti per l'anno accademico corrente, verranno automaticamente copiate, come base, quelle dell'anno più prossimo, se presenti. <em>Opzionalmente</em>, gli amministratori potranno modificare anche le informazioni relative ad altri anni accademici.</li>
- </ol>
 </div></div>
 </section>
 <section class="break intestazione">
