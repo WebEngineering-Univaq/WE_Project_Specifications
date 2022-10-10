@@ -1,12 +1,21 @@
-# Project_Specifications
+# WE_Project_Specifications
 
 > Final course project specifications
 
 ## Usage
 
-This repository contains all the *final project specifications* of the [**Web Engineering course**](https://people.disim.univaq.it/~dellapenna/content.php?page=students). The specifications are organized in folders corresponding to the academic years (i.e., 2021 means academic year 2021/2022).
+This repository contains all the *final project specifications* of the [**Web Engineering course**](https://people.disim.univaq.it/~dellapenna/content.php?page=students). 
 
-*The specifications are provided in HTML format with embedded styles for universal readability and easy portability. Their style should also render well when printed.*
+The specifications are organized in folders corresponding to academic years (i.e., 2021 means academic year 2021/2022).
+
+There are at least two specifications for each academic year. **You can freely choose one of the specifications relative to the year you attended the course**.
+
+Specifications are written in Italian. **English translations**, if available, are marked with "\_EN\_" in the filename.
+
+Each specification is provided in two **formats**:
+
+- *Markdown*, to be easily read with the GitHub viewer directly on your web browser (just select the file to display it).
+* *HTML* with embedded styles, to be easily exported to word processors, converted to PDF and printed (to download the HTML version, simply display the corresponding file, select "Raw" and save the file from your browser's menu).
 
 ---
 
