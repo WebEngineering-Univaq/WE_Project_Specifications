@@ -1,7 +1,7 @@
 ---
 titolo: Guida TV
 numero: 1
-versione 1.0
+versione: 1.0
 lingua: IT
 anno: 2019
 materia: IW

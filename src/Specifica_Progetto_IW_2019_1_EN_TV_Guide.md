@@ -1,7 +1,7 @@
 ---
 titolo: TV Guide
 numero: 1
-versione 1.0
+versione: 1.0
 lingua: EN
 anno: 2019
 materia: IW

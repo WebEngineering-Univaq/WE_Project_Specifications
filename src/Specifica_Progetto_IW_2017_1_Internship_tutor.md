@@ -1,7 +1,7 @@
 ---
 titolo: Internship tutor
 numero: 1
-versione 1.0
+versione: 1.0
 lingua: IT
 anno: 2017
 materia: IW

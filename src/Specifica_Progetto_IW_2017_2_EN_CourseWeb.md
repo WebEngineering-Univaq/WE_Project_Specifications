@@ -1,7 +1,7 @@
 ---
 titolo: CourseWeb
 numero: 2
-versione 2.0
+versione: 2.0
 lingua: EN
 anno: 2017
 materia: IW

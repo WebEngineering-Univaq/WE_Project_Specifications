@@ -1,7 +1,7 @@
 ---
 titolo: SocialDevelop
 numero: 2
-versione 2.0
+versione: 2.0
 lingua: IT
 anno: 2016
 materia: IW
