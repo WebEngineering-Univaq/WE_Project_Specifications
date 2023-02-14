@@ -1,2 +1,2 @@
-# Web Engineering Final Course Projects
-## A.Y. 2021/22
+# Web Engineering Course Project Specifications
+> A.Y. 2021/22
