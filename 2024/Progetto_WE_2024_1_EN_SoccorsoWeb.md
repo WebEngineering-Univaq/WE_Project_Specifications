@@ -1,0 +1,171 @@
+# Web Engineering Course<br/>*Final Projects A.Y. 2024/2025* - Specification #1
+
+<section class="specifica">
+
+## Project "SoccorsoWeb"
+> Version 1.0
+
+### Preamble
+
+The course projects are inspired by real-world needs, and they usually refer to similar sites already published on the web. 
+Students must follow the specifications given by this document, but they can also refine them through an interaction 
+with the teacher and the analysis of similar websites. 
+The final website must be completely original, well organized and easily accessible to all the users.  
+
+### Site Specifications
+
+<section class="descrizione">
+
+
+
+The *SoccorsoWeb* website represents a generic portal for receiving and managing *rescue requests*. The type of assistance offered does not concern us: we will only focus on the general way of managing this kind of request. The website will have sections reserved to *administrators* (who configure the system, route the requests and monitor them) and *operators* (to whom the requests will be sent and who will handle them personally). The public section of the website, on the other hand, will only allow sending a rescue request without the need for any registration.
+
+The site administrators will be able to create accounts for new administrators and operators. For both user categories, in addition to personal data, it should be possible to enter extra information such as the *licenses* held (driving, nautical,...) and a (generic) list of *skills* (for example, an operator might have a nursing diploma, another might be an electrician, etc.) useful for deciding their assignment to missions. The addition of a new user will automatically create his credentials for accessing the portal, which will be sent via email.
+
+To carry out rescue operations, operators will have have access to to *vehicles* (cars, ambulances, fire trucks... depending on the type of emergency that will actually be managed by the site) and *equipments* (medical kits, ladders, fire extinguishers,...). Such elements will be recorded in the site's database (to be very general, they will only have a name and a description), and administrators will be able to add, modify, or delete them.
+
+The homepage of the site will contain a description of the service offered and a form to send *rescue requests*; such requests must necessarily be accompanied by a brief description, the indication of the location (address, coordinates, etc.), the name and email address of the *reporter*, and may optionally be accompanied by a photo. *Be careful to implement this part correctly to avoid spam and various attacks. For example, try to at least include a captcha system (even a very simple one) in this form. Furthermore, the system should not accept multiple consecutive requests from the same reporter (email address) and possibly from the same originating IP address*. Every *submitted* request, before becoming *active*, must be *validated* by sending its content via email to the reporter's address, accompanied by a link to click to confirm it. *Suggestion: create a long and random string and associate it with the request; create a link to a servlet in your project that contains only this string as a parameter and include it in the email. Upon receiving the corresponding call to the server, the system will then be able to know which request needs to be validated. You don't need to actually send the emails if you cannot configure them in the project: you can, for illustrative purposes, generate their content and display it on the screen*.
+
+Administrators will have a dashboard where submitted and validated requests (active), managed requests (in progress), and completed requests (closed) are appropriately displayed. The lists will contain the basic information of each request with the possibility to view all the details through a popup or a dedicated page.
+
+Active requests can be ignored (canceled) or managed by creating a *mission*. Such a mission will be associated with the triggering request, a goal, a location, a *team* (composed of at least one *team leader* operator and zero or more other operators), zero or more vehicles, zero or more equipments, as well as obviously a start timestamp.
+The creation of a mission and thus the assignment of a request to a team must trigger the sending of notifications (emails) to all involved operators. Such notifications will contain the necessary data to participate in the mission (which can still be consulted by the operators by accessing the site, as described later).
+*Attention: the system will need to keep track of the operators, vehicles, and equipments involved in the missions. It should therefore be possible, at the time of creating a new mission, to choose only the available elements, that is, those not already involved in active missions. Each element will also have its own history of the missions it has been involved in, accessible as a detail from the respective list (operators, vehicles, or equipments)*.
+
+Administrators will be able to insert *updates* (blocks of descriptive text) into a mission at any time. Such updates will be displayed in the mission details in chronological order (each will be associated with the entry timestamp), and will trigger the sending of a notification (always at least via email) to the involved operators.
+
+Finally, the administrators (following an appropriate communication from the operators) will be able to mark a mission as completed (closed), entering the end date/time, a generic *success level* (also depending on the type of rescue, we can generally use a number ranging from 0=failure to 5=full success), and optional comments related to the intervention carried out. This will also serve to mark all the resources involved in the mission as free again. The conclusion of a mission will also trigger the sending of a related notification (email) to all involved operators.
+
+Operator users will have access to their personal data and associated missions (closed or ongoing, the latter highlighted).
+
+
+
+</section>
+
+
+The following list contains a brief description of the contents and functionalities required by this site. Obviously, any further refinement or enrichment of these specifications will increase the value of the project.
+
+
+<section class="operazioni">
+  
+
+
+- Access to the site’s rescue request form will be free and will not require any authentication.
+
+- The rescue requests entered into the system will become active, and therefore visible to the administrators, only after their validation, as previously described. *Optionally*, it is possible to ensure that unconfirmed requests are periodically removed from the system.
+
+- The registration of operators and administrators will only be possible by an administrator (so it is assumed that the system will be started with a default initial administrator).
+
+- Administrators will have at least the following views available:
+  1) Active, ongoing, closed, and ignored rescue requests, appropriately paginated and/or filtered by date and type (with the possibility of tracing back to the associated mission in the case of active and closed requests). It is advisable to divide this view into several distinct views by type;
+  2) ongoing missions;
+  2) operators;
+  3) vehicles;
+  4) equipments.
+
+- For each active request, administrators will be able to choose whether to ignore it or associate it with a new mission.
+
+- Missions can only be created by administrators based on an active request, providing all the required data, including the composition of the team and any assigned vehicles/equipments. Obviously, operators, vehicles, or equipments already engaged in an ongoing mission cannot be assigned to a new mission.
+
+- The administrator will be able to add updates to an ongoing mission at any time and close it upon completion. It should not be possible to add updates to closed missions.
+
+- In the views of operators, vehicles, and materials, the elements currently involved in an active mission must be highlighted, with the possibility of viewing their details. It should also be possible to access the history of the missions in which they were involved.
+
+- The operators will have at least the following views available:
+  1) missions in which they are involved (ongoing or closed)
+  2) personal profile (with the possibility to update specializations, licenses, etc.)  
+  </section>
+
+<section class="indicazioni break">
+
+# Directions for Project Development
+
+### Technologies
+
+- The basic *structure* of the site must be created using **HTML5**. The validation of the main site pages 
+is important and must be reported in the documentation.
+
+- The site *layout* must be realised using CCS style sheets. The layout can be freely based 
+on third party layouts available on the web or shown during the lectures. In this case, 
+the degree of **customization** of the layout will be taken into account in the final project assessment.
+ **A responsive layout is not required, but strongly suggested.**
+ 
+- For the *client-side* programming, JavaScript is the required language. It is possible to include 
+libraries developed by third parties, provided that they have suitable cross-browser portability 
+and that they are described in the project documentation. It is, in any case, **not recommended
+the abuse of these technologies**, especially when it is possible to replace them
+with adequate use of HTML, CSS, etc. Generally speaking, it is **admissible that
+scripts play a more important role in the functionalities addressed to a
+restricted and predetermined group of users**, for example in *back-end* functionalities
+for administrators, but not in the public *front-end* of the site or in a
+login procedure. On these pages, the site without scripts may be less "friendly" 
+or allow the access to "core" functionalities only.
+
+- For the *server-side* programming, Java *(servlets)* is the **required** language.
+Any *DBMS* and *template engine*  (like *Freemarker*) can be employed, if required.
+Again, it is possible to rely on external libraries.
+
+- In general, the site must work and have a good *rendering* on the latest versions of Edge, 
+Firefox and Chrome, and *possibly* be compatible with older browsers (in this case it should 
+at least *degrade well*) and with the latest versions of other browsers, like Opera. Browser
+compatibility **must** be explicitly stated in the documentation.  
+
+### Project Development and Documentation
+
+The specifications may not be exhaustive or completely defined. Every feature added or refined, also through an interaction with the stakeholder or the site end users, should be adequately discussed. All the design choices must be discussed and motivated.
+
+The final project, developed following the guidelines given by the present specification, must be a fully functional website, whose contents and features will be assessed during the examination. The specification parts marked as *optional*, if not developed, will not make the project insufficient but, on the other hand, they will not allow your project to reach the highest mark. If you choose to implement an optional feature, the result should not be necessarily perfect or complete: it must only show your commitment to deal with an advanced issue.
+
+The documentation (**in electronic format**) that accompanies the project **must** contain at least the following information:
+
+- Indication of software dependencies (which libraries are required on the client and server side?).
+
+- Indication of the functionalities that have been developed or not developed. Detailed description of any extra or optional functionality added to the project.
+
+- Diagram showing the site structure (e.g. a *navigation diagram*).
+
+- Relational schema of the database (if any).
+
+- Analytical description of the site layout, also indicating its static/dynamic components.
+
+- Description of any advanced technology (language, framework, plugin, library, etc.) used in the project, specifying the reason of its adoption and the actual contribution given to the project development.
+
+- Description of any *possible* cross-browser programming/rendering problem encountered, list of compatible browsers.
+
+- Screenshots of the most important website pages (*optional*).
+
+*The actual contribution of each group member* to the project **must** be declared in the documentation (indicating, for example, the members that mainly worked on server and client side programming, the layout designer, etc.). During the examination, each group member will describe its part of the project.  
+
+### Project Submission
+
+The *documentation* of the project, written up as indicated in the previous sections,
+must be submitted to the teacher **at least two days before** the exam date,
+simply by sending it via email.
+
+*It is not necessary to submit the code*, which will be analyzed and tested during the exam
+(so bring a working copy of the project on your laptop), but it is useful (if possible) to 
+attach to the documentation the URL of a public repository from which it can be downloaded 
+and inspected if necessary.
+
+### Project Evaluation
+
+To evaluate the project, the following aspects will be considered (in order of importance):
+1. Compliance with the specifications.
+2. Technical correctness.
+3. Organizational clarity and correctness of the contents.
+4. Accessibility and standards compliance.
+5. Appropriate use of static and dynamic contents. 
+6. Design quality.
+7. Adequacy of the documentation.
+
+This evaluation will be combined with the result of the project discussion.  
+
+### Additional Information
+
+This specification is available in Web Engineering course repository at the address https://github.com/WebEngineering-Univaq/WE_Project_Specifications. 
+Additional information on the specifications can be obtained directly via email by writing to giuseppe.dellapenna@univaq.it.
+
+Please note that projects should be carried out by *small* student groups (three members is the recommended number). 
+Exceptions to this rule must be agreed with the teacher.  
+</section>
+
